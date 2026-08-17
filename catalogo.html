@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo — Nexoparts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-body bg-base text-ink antialiased">
+<div class="grain"></div>
+
+<div class="hidden sm:block bg-surface2 border-b border-line text-xs">
+  <div class="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between text-mute font-mono">
+    <span>ÑUÑOA, SANTIAGO · DESPACHO A TODO CHILE</span>
+    <div class="flex items-center gap-6">
+      <span>LUN–VIE 09:00–18:30 · SÁB 09:00–14:00</span>
+      <a href="tel:+56999555599" class="text-hazard hover:text-orange">+56 9 9955 5599</a>
+    </div>
+  </div>
+</div>
+
+<header class="sticky top-0 z-50 bg-base/95 backdrop-blur border-b border-line">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2">
+      <span class="font-display font-700 text-2xl tracking-tight text-ink">NEXO<span class="text-orange">PARTS</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 font-display uppercase text-sm tracking-wide text-mute">
+      <a href="catalogo.html" class="link-underline text-ink px-1 py-1 rounded-sm glow-hover">Catálogo</a>
+      <a href="contacto.html" class="link-underline hover:text-ink px-1 py-1 rounded-sm glow-hover">Contacto</a>
+    </nav>
+    <button id="menuBtn" aria-label="Abrir menú" class="md:hidden text-ink glow-hover rounded-sm p-1">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <nav id="mobileMenu" class="hidden md:hidden border-t border-line bg-surface font-display uppercase text-sm tracking-wide">
+    <a href="catalogo.html" class="block px-6 py-3 text-ink border-b border-line glow-hover">Catálogo</a>
+    <a href="contacto.html" class="block px-6 py-3 text-mute hover:text-ink glow-hover">Contacto</a>
+  </nav>
+</header>
+
+<main>
+<section class="border-b border-line">
+  <div class="max-w-7xl mx-auto px-6 py-10">
+    <span class="font-mono text-xs text-steel">CATÁLOGO COMPLETO</span>
+    <h1 class="font-display font-700 uppercase text-3xl sm:text-4xl mt-2 mb-8">Filtra por marca, pieza o SKU</h1>
+
+    <!-- FUNCTIONAL FILTER BAR -->
+    <div class="bg-surface border border-line rounded-sm p-4 sm:p-5 grid grid-cols-1 sm:grid-cols-4 gap-3 items-end">
+      <div>
+        <label for="fMarca" class="font-mono text-[11px] text-mute uppercase">Marca</label>
+        <select id="fMarca" class="field mt-1"><option value="">Todas las marcas</option></select>
+      </div>
+      <div>
+        <label for="fCategoria" class="font-mono text-[11px] text-mute uppercase">Pieza</label>
+        <select id="fCategoria" class="field mt-1"><option value="">Todas las piezas</option></select>
+      </div>
+      <div>
+        <label for="fQ" class="font-mono text-[11px] text-mute uppercase">SKU o palabra clave</label>
+        <input id="fQ" type="text" placeholder="Ej: WPT-057, pastillas..." class="field mt-1 vin-input">
+      </div>
+      <button id="clearFilters" class="glow-hover border border-line rounded-sm px-4 py-2.5 font-display uppercase text-sm text-mute">Limpiar filtros</button>
+    </div>
+
+    <p id="resultsCount" class="font-mono text-xs text-mute mt-5"></p>
+  </div>
+</section>
+
+<section class="border-b border-line">
+  <div class="max-w-7xl mx-auto px-6 py-10">
+    <div id="catalogGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+    <div id="emptyState" class="hidden text-center py-16">
+      <p class="font-display uppercase text-xl text-mute">No encontramos piezas con esos filtros</p>
+      <p class="text-mute text-sm mt-2">Escríbenos el modelo de tu auto y la pieza que buscas, la agregamos al catálogo.</p>
+      <a href="contacto.html" class="inline-block mt-5 btn-primary bg-orange text-base font-display uppercase text-sm font-600 px-6 py-3 rounded-sm">Consultar por esta pieza</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="bg-surface2">
+  <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-3 gap-8">
+    <div>
+      <span class="font-display font-700 text-xl">NEXO<span class="text-orange">PARTS</span></span>
+      <p class="text-mute text-sm mt-3 max-w-xs">Ñuñoa, Santiago. Despacho a todo Chile.</p>
+      <p class="font-mono text-xs text-mute mt-4">
+        <a href="tel:+56999555599" class="hover:text-orange">+56 9 9955 5599</a><br>
+        <a href="mailto:nexoparts.spa@gmail.com" class="hover:text-orange">nexoparts.spa@gmail.com</a>
+      </p>
+    </div>
+    <div>
+      <p class="font-display uppercase text-sm text-ink mb-3">Navegación</p>
+      <ul class="space-y-2 text-sm text-mute">
+        <li><a href="catalogo.html" class="hover:text-orange">Catálogo</a></li>
+        <li><a href="contacto.html" class="hover:text-orange">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-display uppercase text-sm text-ink mb-3">Horario</p>
+      <p class="text-sm text-mute">Lun–Vie 09:00–18:30<br>Sáb 09:00–14:00</p>
+    </div>
+  </div>
+  <div class="hazard-strip h-1"></div>
+  <div class="max-w-7xl mx-auto px-6 py-5 text-center text-xs font-mono text-mute">
+    © 2026 Nexoparts — Todos los derechos reservados
+  </div>
+</footer>
+
+<script src="products.js"></script>
+<script>
+  document.getElementById('menuBtn').addEventListener('click', function () {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+  });
+
+  const fMarca = document.getElementById('fMarca');
+  const fCategoria = document.getElementById('fCategoria');
+  const fQ = document.getElementById('fQ');
+  const grid = document.getElementById('catalogGrid');
+  const emptyState = document.getElementById('emptyState');
+  const resultsCount = document.getElementById('resultsCount');
+  const fmt = n => n.toLocaleString('es-CL');
+
+  NEXOPARTS_BRANDS.forEach(b => {
+    const opt = document.createElement('option');
+    opt.value = b; opt.textContent = b;
+    fMarca.appendChild(opt);
+  });
+  NEXOPARTS_CATEGORIES.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c.id; opt.textContent = c.label;
+    fCategoria.appendChild(opt);
+  });
+
+  // Pre-fill filters from URL (?marca=&categoria=&q=) coming from the home page search
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('marca')) fMarca.value = params.get('marca');
+  if (params.get('categoria')) fCategoria.value = params.get('categoria');
+  if (params.get('q')) fQ.value = params.get('q');
+
+  function waLink(p) {
+    const msg = `Hola, quiero consultar disponibilidad de: ${p.name} (SKU ${p.sku}) para ${p.brand} ${p.fits}`;
+    return `https://wa.me/56999555599?text=${encodeURIComponent(msg)}`;
+  }
+
+  function render() {
+    const marca = fMarca.value;
+    const categoria = fCategoria.value;
+    const q = fQ.value.trim().toLowerCase();
+
+    const results = NEXOPARTS_PRODUCTS.filter(p => {
+      if (marca && p.brand !== marca) return false;
+      if (categoria && p.category !== categoria) return false;
+      if (q) {
+        const haystack = `${p.name} ${p.sku} ${p.brand} ${p.fits}`.toLowerCase();
+        if (!haystack.includes(q)) return false;
+      }
+      return true;
+    });
+
+    resultsCount.textContent = `${results.length} pieza${results.length === 1 ? '' : 's'} encontrada${results.length === 1 ? '' : 's'}`;
+
+    grid.innerHTML = results.map(p => `
+      <div class="part-card bg-surface border border-line rounded-sm p-5 flex flex-col">
+        <div class="aspect-[4/3] bg-base rounded-sm border border-line mb-4 flex items-center justify-center overflow-hidden relative">
+          <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div style="display:none" class="w-full h-full items-center justify-center text-mute font-mono text-[10px] uppercase text-center px-2">Foto pendiente<br>${p.sku}</div>
+        </div>
+        <span class="font-mono text-[11px] text-steel">${p.brand.toUpperCase()} · ${p.sku}</span>
+        <h3 class="font-display uppercase text-base mt-1">${p.name}</h3>
+        <p class="text-mute text-xs mt-1">${p.fits}</p>
+        <div class="mt-auto pt-4 flex items-center justify-between gap-2">
+          <span class="font-mono text-ink">$${fmt(p.price)}</span>
+          <a href="${waLink(p)}" target="_blank" rel="noopener" class="btn-primary bg-orange text-base font-display uppercase text-xs font-600 px-3 py-2 rounded-sm whitespace-nowrap">Consultar</a>
+        </div>
+      </div>
+    `).join('');
+
+    emptyState.classList.toggle('hidden', results.length > 0);
+  }
+
+  [fMarca, fCategoria].forEach(el => el.addEventListener('change', render));
+  fQ.addEventListener('input', render);
+  document.getElementById('clearFilters').addEventListener('click', () => {
+    fMarca.value = ''; fCategoria.value = ''; fQ.value = '';
+    history.replaceState(null, '', 'catalogo.html');
+    render();
+  });
+
+  render();
+</script>
+
+</body>
+</html>

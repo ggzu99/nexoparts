@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexoparts — Repuestos y Refacciones Automotrices</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-body bg-base text-ink antialiased">
+<div class="grain"></div>
+
+<!-- TOP UTILITY BAR -->
+<div class="hidden sm:block bg-surface2 border-b border-line text-xs">
+  <div class="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between text-mute font-mono">
+    <span>ÑUÑOA, SANTIAGO · DESPACHO A TODO CHILE</span>
+    <div class="flex items-center gap-6">
+      <span>LUN–VIE 09:00–18:30 · SÁB 09:00–14:00</span>
+      <a href="tel:+56999555599" class="text-hazard hover:text-orange">+56 9 9955 5599</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-base/95 backdrop-blur border-b border-line">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <!--
+      LOGO: reemplaza el <span> de abajo por tu logo real así:
+      <a href="index.html"><img src="images/logo.svg" alt="Nexoparts" class="h-8 w-auto"></a>
+      Sube el archivo del logo a una carpeta "images/" junto a este HTML.
+    -->
+    <a href="index.html" class="flex items-center gap-2">
+      <span class="font-display font-700 text-2xl tracking-tight text-ink">NEXO<span class="text-orange">PARTS</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 font-display uppercase text-sm tracking-wide text-mute">
+      <a href="catalogo.html" class="link-underline hover:text-ink px-1 py-1 rounded-sm glow-hover">Catálogo</a>
+      <a href="contacto.html" class="link-underline hover:text-ink px-1 py-1 rounded-sm glow-hover">Contacto</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="catalogo.html" class="hidden sm:flex items-center gap-2 text-ink font-mono text-sm border border-line rounded px-3 py-1.5 glow-hover">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        Catálogo
+      </a>
+      <button id="menuBtn" aria-label="Abrir menú" class="md:hidden text-ink glow-hover rounded-sm p-1">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav id="mobileMenu" class="hidden md:hidden border-t border-line bg-surface font-display uppercase text-sm tracking-wide">
+    <a href="catalogo.html" class="block px-6 py-3 text-mute hover:text-ink border-b border-line glow-hover">Catálogo</a>
+    <a href="contacto.html" class="block px-6 py-3 text-mute hover:text-ink glow-hover">Contacto</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="relative border-b border-line overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+    <div class="lg:col-span-7">
+      <span class="inline-block font-mono text-xs text-hazard border border-hazard/40 rounded-sm px-2 py-1 mb-6">REF. CATÁLOGO 04812-A</span>
+      <h1 class="font-display font-700 uppercase leading-[0.95] text-4xl sm:text-5xl lg:text-6xl text-ink">
+        Encuentra la pieza exacta,<br class="hidden sm:block"> no una aproximada.
+      </h1>
+      <p class="mt-6 text-mute text-base sm:text-lg max-w-xl">
+        Filtra el catálogo por marca de tu auto y tipo de pieza. Stock verificado, sin promesas de "puede que llegue".
+      </p>
+
+      <!-- FUNCTIONAL SEARCH -> redirects to catalogo.html with filters applied -->
+      <form id="heroSearch" action="catalogo.html" method="get" class="mt-8 bg-surface border border-line rounded-sm p-4 sm:p-5 max-w-xl">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div>
+            <label for="marca" class="font-mono text-[11px] text-mute uppercase">Marca</label>
+            <select id="marca" name="marca" class="field mt-1">
+              <option value="">Todas las marcas</option>
+            </select>
+          </div>
+          <div>
+            <label for="categoria" class="font-mono text-[11px] text-mute uppercase">Pieza</label>
+            <select id="categoria" name="categoria" class="field mt-1">
+              <option value="">Todas las piezas</option>
+            </select>
+          </div>
+          <div>
+            <label for="q" class="font-mono text-[11px] text-mute uppercase">SKU o palabra clave</label>
+            <input id="q" name="q" type="text" placeholder="Ej: WPT-057" class="field mt-1 vin-input">
+          </div>
+        </div>
+        <button type="submit" class="btn-primary w-full sm:w-auto mt-4 bg-orange text-base font-display uppercase tracking-wide text-sm font-600 px-6 py-3 rounded-sm">Buscar en el catálogo</button>
+      </form>
+
+      <!-- STAMPED SPEC PLATE -->
+      <div class="plate rounded-sm mt-10 px-8 py-6 grid grid-cols-2 gap-4 max-w-xl">
+        <div class="rivet-tl"></div><div class="rivet-tr"></div><div class="rivet-bl"></div><div class="rivet-br"></div>
+        <div>
+          <p class="font-display text-2xl sm:text-3xl text-orange">TODO CHILE</p>
+          <p class="font-mono text-[11px] text-mute uppercase tracking-wide mt-1">Despacho a domicilio</p>
+        </div>
+        <div>
+          <p class="font-display text-2xl sm:text-3xl text-hazard">6 MESES</p>
+          <p class="font-mono text-[11px] text-mute uppercase tracking-wide mt-1">Garantía OEM</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLUEPRINT DIAGRAM -->
+    <div class="lg:col-span-5">
+      <div class="blueprint-grid bg-surface border border-line rounded-sm p-6 relative">
+        <p class="font-mono text-[11px] text-steel uppercase tracking-wide mb-2">Fig. 03 — Sistema de freno delantero</p>
+        <svg viewBox="0 0 380 340" class="w-full h-auto" role="img" aria-label="Diagrama técnico de sistema de freno delantero con disco, pastillas y caliper">
+          <circle cx="190" cy="150" r="95" fill="none" stroke="#4C7A9E" stroke-width="1.5"/>
+          <circle cx="190" cy="150" r="70" fill="none" stroke="#4C7A9E" stroke-width="1"/>
+          <circle cx="190" cy="150" r="28" fill="none" stroke="#8A9099" stroke-width="1.5"/>
+          <circle cx="190" cy="150" r="6" fill="#8A9099"/>
+          <g stroke="#8A9099" stroke-width="1">
+            <line x1="190" y1="55" x2="190" y2="85"/>
+            <line x1="190" y1="215" x2="190" y2="245"/>
+            <line x1="95" y1="150" x2="125" y2="150"/>
+            <line x1="255" y1="150" x2="285" y2="150"/>
+          </g>
+          <rect x="150" y="122" width="26" height="56" rx="3" fill="none" stroke="#F2B705" stroke-width="1.5"/>
+          <rect x="204" y="122" width="26" height="56" rx="3" fill="none" stroke="#F2B705" stroke-width="1.5"/>
+          <rect x="140" y="112" width="100" height="76" rx="6" fill="none" stroke="#FF5A1F" stroke-width="1.5" stroke-dasharray="3 3"/>
+          <line x1="190" y1="55" x2="80" y2="30" stroke="#4C7A9E" stroke-width="0.75" stroke-dasharray="2 2"/>
+          <text x="20" y="26" font-family="IBM Plex Mono" font-size="10" fill="#4C7A9E">01 · DISCO VENTILADO</text>
+          <line x1="140" y1="150" x2="40" y2="150" stroke="#F2B705" stroke-width="0.75" stroke-dasharray="2 2"/>
+          <text x="10" y="146" font-family="IBM Plex Mono" font-size="10" fill="#F2B705">02 · PASTILLAS</text>
+          <line x1="240" y1="150" x2="345" y2="150" stroke="#FF5A1F" stroke-width="0.75" stroke-dasharray="2 2"/>
+          <text x="256" y="146" font-family="IBM Plex Mono" font-size="10" fill="#FF5A1F">03 · CALIPER</text>
+          <line x1="190" y1="245" x2="270" y2="300" stroke="#8A9099" stroke-width="0.75" stroke-dasharray="2 2"/>
+          <text x="238" y="315" font-family="IBM Plex Mono" font-size="10" fill="#8A9099">04 · PERNO GUÍA</text>
+        </svg>
+      </div>
+    </div>
+
+  </div>
+  <div class="hazard-strip h-1.5 w-full"></div>
+</section>
+
+<!-- BRAND MARQUEE -->
+<section class="border-b border-line bg-surface2 py-5">
+  <p class="text-center font-mono text-[11px] text-mute uppercase tracking-widest mb-3">Manejamos stock para estas marcas</p>
+  <div class="marquee-wrap">
+    <div class="marquee-track font-display uppercase text-lg sm:text-xl tracking-widest text-mute gap-16 pr-16">
+      <span id="marqueeSetA" class="flex gap-16"></span>
+      <span id="marqueeSetB" class="flex gap-16"></span>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="border-b border-line">
+  <div class="max-w-7xl mx-auto px-6 py-16">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+      <div>
+        <span class="font-mono text-xs text-steel">CATÁLOGO</span>
+        <h2 class="font-display font-700 uppercase text-3xl sm:text-4xl mt-2">Piezas con stock real</h2>
+      </div>
+      <a href="catalogo.html" class="link-underline font-display uppercase text-sm text-orange glow-hover px-2 py-1 rounded-sm">Ver catálogo completo →</a>
+    </div>
+    <div id="featuredGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+  </div>
+</section>
+
+<!-- WORK ORDERS / TESTIMONIALS -->
+<section class="border-b border-line bg-surface2">
+  <div class="max-w-7xl mx-auto px-6 py-16">
+    <span class="font-mono text-xs text-steel">TALLERES Y CLIENTES QUE COMPRAN CON NOSOTROS</span>
+    <h2 class="font-display font-700 uppercase text-3xl sm:text-4xl mt-2 mb-10">Órdenes de trabajo reales</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+      <div class="bg-base border border-line rounded-sm overflow-hidden glow-hover">
+        <div class="flex items-center justify-between px-5 py-3 border-b border-line bg-surface2 font-mono text-xs text-hazard">
+          <span>ORDEN #4471</span><span>RESUELTA</span>
+        </div>
+        <div class="p-5">
+          <p class="text-ink text-sm">"Necesitábamos un kit de embrague Exedy para un Corolla 2011 con urgencia. Confirmaron stock por WhatsApp y llegó al día siguiente."</p>
+          <p class="font-mono text-xs text-mute mt-4">Taller Rivera — San Bernardo</p>
+        </div>
+      </div>
+
+      <div class="bg-base border border-line rounded-sm overflow-hidden glow-hover">
+        <div class="flex items-center justify-between px-5 py-3 border-b border-line bg-surface2 font-mono text-xs text-hazard">
+          <span>ORDEN #3902</span><span>RESUELTA</span>
+        </div>
+        <div class="p-5">
+          <p class="text-ink text-sm">"Dejamos de adivinar el código de motor. Filtramos por marca y modelo y el sistema descartó las piezas que no calzaban."</p>
+          <p class="font-mono text-xs text-mute mt-4">MecánicaExpress — Ñuñoa</p>
+        </div>
+      </div>
+
+      <div class="bg-base border border-line rounded-sm overflow-hidden glow-hover">
+        <div class="flex items-center justify-between px-5 py-3 border-b border-line bg-surface2 font-mono text-xs text-hazard">
+          <span>ORDEN #5108</span><span>RESUELTA</span>
+        </div>
+        <div class="p-5">
+          <p class="text-ink text-sm">"Trabajamos con precio por volumen para talleres. Cotización por correo el mismo día, sin llamadas de por medio."</p>
+          <p class="font-mono text-xs text-mute mt-4">AutoTaller Contreras — Puente Alto</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="border-b border-line">
+  <div class="max-w-7xl mx-auto px-6 py-16 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <div>
+      <h2 class="font-display font-700 uppercase text-2xl sm:text-3xl">¿Buscas una pieza específica o precio por volumen?</h2>
+      <p class="text-mute mt-2">Escríbenos con el modelo de tu auto o el SKU de la pieza y te confirmamos stock.</p>
+    </div>
+    <a href="contacto.html" class="btn-primary bg-orange text-base font-display uppercase tracking-wide text-sm font-600 px-8 py-3 rounded-sm whitespace-nowrap">Ir a contacto</a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-surface2">
+  <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-3 gap-8">
+    <div>
+      <span class="font-display font-700 text-xl">NEXO<span class="text-orange">PARTS</span></span>
+      <p class="text-mute text-sm mt-3 max-w-xs">Ñuñoa, Santiago. Despacho a todo Chile.</p>
+      <p class="font-mono text-xs text-mute mt-4">
+        <a href="tel:+56999555599" class="hover:text-orange">+56 9 9955 5599</a><br>
+        <a href="mailto:nexoparts.spa@gmail.com" class="hover:text-orange">nexoparts.spa@gmail.com</a>
+      </p>
+    </div>
+    <div>
+      <p class="font-display uppercase text-sm text-ink mb-3">Navegación</p>
+      <ul class="space-y-2 text-sm text-mute">
+        <li><a href="catalogo.html" class="hover:text-orange">Catálogo</a></li>
+        <li><a href="contacto.html" class="hover:text-orange">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-display uppercase text-sm text-ink mb-3">Horario</p>
+      <p class="text-sm text-mute">Lun–Vie 09:00–18:30<br>Sáb 09:00–14:00</p>
+    </div>
+  </div>
+  <div class="hazard-strip h-1"></div>
+  <div class="max-w-7xl mx-auto px-6 py-5 text-center text-xs font-mono text-mute">
+    © 2026 Nexoparts — Todos los derechos reservados
+  </div>
+</footer>
+
+<script src="products.js"></script>
+<script>
+  document.getElementById('menuBtn').addEventListener('click', function () {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+  });
+
+  // Populate hero search selects from the shared product data
+  const marcaSelect = document.getElementById('marca');
+  NEXOPARTS_BRANDS.forEach(b => {
+    const opt = document.createElement('option');
+    opt.value = b; opt.textContent = b;
+    marcaSelect.appendChild(opt);
+  });
+  const categoriaSelect = document.getElementById('categoria');
+  NEXOPARTS_CATEGORIES.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c.id; opt.textContent = c.label;
+    categoriaSelect.appendChild(opt);
+  });
+
+  // Brand marquee (duplicated for seamless loop)
+  function renderMarquee(elId) {
+    const el = document.getElementById(elId);
+    el.innerHTML = NEXOPARTS_BRANDS.map(b => `<span>${b}</span><span class="text-orange">·</span>`).join('');
+  }
+  renderMarquee('marqueeSetA');
+  renderMarquee('marqueeSetB');
+
+  // Featured products (first 4)
+  const featuredGrid = document.getElementById('featuredGrid');
+  const fmt = n => n.toLocaleString('es-CL');
+  NEXOPARTS_PRODUCTS.slice(0, 4).forEach(p => {
+    featuredGrid.insertAdjacentHTML('beforeend', `
+      <div class="part-card bg-surface border border-line rounded-sm p-5 flex flex-col">
+        <div class="aspect-[4/3] bg-base rounded-sm border border-line mb-4 flex items-center justify-center overflow-hidden">
+          <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div style="display:none" class="w-full h-full items-center justify-center text-mute font-mono text-[10px] uppercase text-center px-2">Foto pendiente<br>${p.sku}</div>
+        </div>
+        <span class="font-mono text-[11px] text-steel">${p.brand.toUpperCase()} · ${p.sku}</span>
+        <h3 class="font-display uppercase text-base mt-1">${p.name}</h3>
+        <p class="text-mute text-xs mt-1">${p.fits}</p>
+        <div class="mt-auto pt-4 flex items-center justify-between">
+          <span class="font-mono text-ink">$${fmt(p.price)}</span>
+          <a href="catalogo.html" class="btn-primary bg-orange text-base font-display uppercase text-xs font-600 px-3 py-2 rounded-sm">Ver</a>
+        </div>
+      </div>
+    `);
+  });
+</script>
+
+</body>
+</html>
