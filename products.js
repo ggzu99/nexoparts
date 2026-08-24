@@ -5,155 +5,180 @@
 // No es necesario tocar el HTML ni el CSS.
 //
 // Campos de cada producto:
-//   id       -> identificador único (texto, sin espacios)
-//   name     -> nombre del producto
-//   brand    -> marca de auto compatible (debe coincidir con el filtro)
-//   category -> una de: "frenos", "suspension", "motor", "electrico", "filtros", "carroceria"
-//   sku      -> código de referencia / SKU de fábrica
-//   fits     -> texto de compatibilidad (modelo, motor, años)
-//   price    -> precio en CLP, solo número
-//   img      -> ruta a la foto real del producto (ver instrucciones abajo)
+//   id       -> código del producto (el mismo que usas tú internamente)
+//   name     -> tipo de producto (sin marca ni modelo, eso va en brand/fits)
+//   brand    -> marca del auto compatible (debe coincidir con el filtro)
+//   category -> una de: "cilindro", "chapa-set", "chapa-individual"
+//   sku      -> código de referencia (usamos el mismo ID)
+//   fits     -> modelo del auto y años de compatibilidad
+//   stock    -> unidades disponibles (se muestra como aviso de stock limitado)
+//   img      -> foto principal del producto
+//   img2     -> segunda foto (se muestra al pasar el mouse sobre la primera)
 //
-// CÓMO PONER FOTOS REALES:
-//   1. Crea una carpeta "images/productos/" junto a estos archivos HTML.
-//   2. Guarda ahí la foto de cada repuesto, idealmente cuadrada o 4:3,
-//      formato .jpg o .webp, menos de 300kb (para que cargue rápido).
-//   3. En el campo "img" de cada producto, escribe la ruta relativa, ej:
-//      img: "images/productos/bomba-agua-wpt057.jpg"
-//   4. Si una imagen no existe o no carga, la página muestra automáticamente
-//      un ícono de reemplazo — no se rompe el diseño.
+// FOTOS:
+//   Van dentro de "images/productos/", nombradas como <ID>_1.jpg y <ID>_2.jpg
+//   (ej: images/productos/45022_1.jpg, images/productos/45022_2.jpg).
+//   Si falta alguna, se muestra automáticamente un aviso "Foto pendiente"
+//   en vez de romper el diseño.
+//
+// PRECIO:
+//   Como el stock es acotado (1–2 unidades por producto), no se muestra un
+//   precio fijo: cada tarjeta tiene un botón "Consultar" que abre WhatsApp
+//   con el SKU y el auto ya escritos en el mensaje. Si más adelante quieres
+//   mostrar precio fijo, agrega un campo "price: 12990" a cada producto y
+//   dime para activar la visualización de precio en las tarjetas.
 // ============================================================================
 
 const NEXOPARTS_PRODUCTS = [
   {
-    id: "wpt057",
-    name: "Bomba de Agua AISIN WPT-057",
-    brand: "Toyota",
-    category: "motor",
-    sku: "AISIN-WPT057",
-    fits: "Hilux 2.4L 2GD-FTV (2015–2023)",
-    price: 38990,
-    img: "images/productos/bomba-agua-wpt057.jpg"
-  },
-  {
-    id: "tyk2043",
-    name: "Kit de Embrague Exedy OEM",
-    brand: "Toyota",
-    category: "motor",
-    sku: "EXEDY-TYK2043",
-    fits: "Corolla 1.8L 2ZR (2009–2019)",
-    price: 145000,
-    img: "images/productos/embrague-tyk2043.jpg"
-  },
-  {
-    id: "gdb1330",
-    name: "Pastillas de Freno Delanteras",
-    brand: "Nissan",
-    category: "frenos",
-    sku: "TRW-GDB1330",
-    fits: "Qashqai J11 (2014–2021)",
-    price: 24500,
-    img: "images/productos/pastillas-gdb1330.jpg"
-  },
-  {
-    id: "g8134",
-    name: "Amortiguador Delantero",
-    brand: "Chevrolet",
-    category: "suspension",
-    sku: "MONROE-G8134",
-    fits: "Sail 1.4L (2013–2020)",
-    price: 32900,
-    img: "images/productos/amortiguador-g8134.jpg"
-  },
-  {
-    id: "oc90",
-    name: "Filtro de Aceite",
-    brand: "Volkswagen",
-    category: "filtros",
-    sku: "MAHLE-OC90",
-    fits: "Motores EA211 1.0 / 1.4",
-    price: 6990,
-    img: "images/productos/filtro-oc90.jpg"
-  },
-  {
-    id: "k015420xs",
-    name: "Kit Correa de Distribución",
+    id: "45022",
+    name: "Set Cilindro Puerta",
     brand: "Hyundai",
-    category: "motor",
-    sku: "GATES-K015420XS",
-    fits: "Accent 1.4L (2011–2017)",
-    price: 58400,
-    img: "images/productos/correa-k015420xs.jpg"
+    category: "cilindro",
+    sku: "45022",
+    fits: "H100 Porter (2005–2023)",
+    stock: 1,
+    img: "images/productos/45022_1.jpg",
+    img2: "images/productos/45022_2.jpg"
   },
   {
-    id: "denso2344324",
-    name: "Sensor de Oxígeno",
-    brand: "Mazda",
-    category: "electrico",
-    sku: "DENSO-234-4324",
-    fits: "Mazda 3 Skyactiv-G 2.0L (2014–2019)",
-    price: 41200,
-    img: "images/productos/sensor-denso.jpg"
+    id: "45052",
+    name: "Set Chapa de Contacto + Cilindro + Tapa D.",
+    brand: "Hyundai",
+    category: "chapa-set",
+    sku: "45052",
+    fits: "Frontier (2005–2012)",
+    stock: 1,
+    img: "images/productos/45052_1.jpg",
+    img2: "images/productos/45052_2.jpg"
   },
   {
-    id: "k80641",
-    name: "Rótula de Suspensión",
-    brand: "Ford",
-    category: "suspension",
-    sku: "MOOG-K80641",
-    fits: "Ranger 2.2L / 3.2L",
-    price: 27800,
-    img: "images/productos/rotula-k80641.jpg"
+    id: "45019",
+    name: "Set Chapa de Contacto + Cilindro + Tapa D.",
+    brand: "Hyundai",
+    category: "chapa-set",
+    sku: "45019",
+    fits: "Porter HR (2014–2025)",
+    stock: 2,
+    img: "images/productos/45019_1.jpg",
+    img2: "images/productos/45019_2.jpg"
   },
   {
-    id: "ngkiridium",
-    name: "Bujía Iridium IX (juego de 4)",
-    brand: "Kia",
-    category: "motor",
-    sku: "NGK-IX-KIA14",
-    fits: "Rio 1.4L (2012–2020)",
-    price: 8990,
-    img: "images/productos/bujia-ngk-iridium.jpg"
+    id: "45023",
+    name: "Set Chapa de Contacto + Cilindro + Tapa D.",
+    brand: "Hyundai",
+    category: "chapa-set",
+    sku: "45023",
+    fits: "Porter (2005–2023)",
+    stock: 2,
+    img: "images/productos/45023_1.jpg",
+    img2: "images/productos/45023_2.jpg"
   },
   {
-    id: "es800115",
-    name: "Rótula Axial de Dirección",
-    brand: "Peugeot",
-    category: "suspension",
-    sku: "MOOG-ES800115",
-    fits: "208 1.6L (2013–2019)",
-    price: 18500,
-    img: "images/productos/rotula-es800115.jpg"
+    id: "45096",
+    name: "Set Chapa de Contacto y Cilindros de Puertas",
+    brand: "Toyota",
+    category: "chapa-set",
+    sku: "45096",
+    fits: "Hilux (2005–2015)",
+    stock: 2,
+    img: "images/productos/45096_1.jpg",
+    img2: "images/productos/45096_2.jpg"
   },
   {
-    id: "gates6pk1190",
-    name: "Correa de Alternador",
-    brand: "Suzuki",
-    category: "motor",
-    sku: "GATES-6PK1190",
-    fits: "Swift 1.2L (2011–2017)",
-    price: 12300,
-    img: "images/productos/correa-6pk1190.jpg"
+    id: "45029",
+    name: "Set Chapa de Contacto y Cilindros",
+    brand: "Hyundai",
+    category: "chapa-set",
+    sku: "45029",
+    fits: "Tucson (2009–2015)",
+    stock: 2,
+    img: "images/productos/45029_1.jpg",
+    img2: "images/productos/45029_2.jpg"
   },
   {
-    id: "espejosail",
-    name: "Espejo Retrovisor Derecho",
+    id: "45026",
+    name: "Set Chapa de Contacto y Cilindros",
+    brand: "Hyundai",
+    category: "chapa-set",
+    sku: "45026",
+    fits: "H100 Porter (1996–2005)",
+    stock: 1,
+    img: "images/productos/45026_1.jpg",
+    img2: "images/productos/45026_2.jpg"
+  },
+  {
+    id: "45040",
+    name: "Set Chapa de Contacto y Cilindros",
+    brand: "Hyundai",
+    category: "chapa-set",
+    sku: "45040",
+    fits: "Accent (2006–2011)",
+    stock: 1,
+    img: "images/productos/45040_1.jpg",
+    img2: "images/productos/45040_2.jpg"
+  },
+  {
+    id: "45089",
+    name: "Set Chapa de Contacto y Cilindros de Puertas",
     brand: "Chevrolet",
-    category: "carroceria",
-    sku: "NX-CAR-0446",
-    fits: "Sail (2013–2020)",
-    price: 45000,
-    img: "images/productos/espejo-sail.jpg"
+    category: "chapa-set",
+    sku: "45089",
+    fits: "Sail 1.4 (2011–2017)",
+    stock: 2,
+    img: "images/productos/45089_1.jpg",
+    img2: "images/productos/45089_2.jpg"
+  },
+  {
+    id: "45028",
+    name: "Chapa de Contacto",
+    brand: "Hyundai",
+    category: "chapa-individual",
+    sku: "45028",
+    fits: "Accent RB (2011–2020)",
+    stock: 2,
+    img: "images/productos/45028_1.jpg",
+    img2: "images/productos/45028_2.jpg"
+  },
+  {
+    id: "45025",
+    name: "Chapa de Contacto",
+    brand: "Hyundai",
+    category: "chapa-individual",
+    sku: "45025",
+    fits: "H100 Porter (1996–2005) / Grace Van (1993–2004)",
+    stock: 1,
+    img: "images/productos/45025_1.jpg",
+    img2: "images/productos/45025_2.jpg"
+  },
+  {
+    id: "45020",
+    name: "Chapa de Contacto",
+    brand: "Kia",
+    category: "chapa-individual",
+    sku: "45020",
+    fits: "Frontier II (2005–2014)",
+    stock: 1,
+    img: "images/productos/45020_1.jpg",
+    img2: "images/productos/45020_2.jpg"
+  },
+  {
+    id: "45039",
+    name: "Chapa de Contacto",
+    brand: "Hyundai",
+    category: "chapa-individual",
+    sku: "45039",
+    fits: "Accent (2000–2006)",
+    stock: 1,
+    img: "images/productos/45039_1.jpg",
+    img2: "images/productos/45039_2.jpg"
   }
 ];
 
-const NEXOPARTS_BRANDS = ["Toyota", "Nissan", "Chevrolet", "Hyundai", "Kia", "Ford", "Mazda", "Suzuki", "Volkswagen", "Peugeot"];
+const NEXOPARTS_BRANDS = ["Hyundai", "Toyota", "Chevrolet", "Kia"];
 
 const NEXOPARTS_CATEGORIES = [
-  { id: "frenos", label: "Frenos" },
-  { id: "suspension", label: "Suspensión y Dirección" },
-  { id: "motor", label: "Motor y Transmisión" },
-  { id: "electrico", label: "Eléctrico y Sensores" },
-  { id: "filtros", label: "Filtros y Lubricación" },
-  { id: "carroceria", label: "Carrocería y Espejos" }
+  { id: "cilindro", label: "Cilindro de Puerta" },
+  { id: "chapa-set", label: "Set Chapa de Contacto" },
+  { id: "chapa-individual", label: "Chapa de Contacto" }
 ];

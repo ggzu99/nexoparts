@@ -18,7 +18,7 @@
   <div class="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between text-mute font-mono">
     <span>ÑUÑOA, SANTIAGO · DESPACHO A TODO CHILE</span>
     <div class="flex items-center gap-6">
-      <span>LUN–VIE 09:00–18:30 · SÁB 09:00–14:00</span>
+      <span>LUN–VIE 09:00–18:30</span>
       <a href="tel:+56999555599" class="text-hazard hover:text-orange">+56 9 9955 5599</a>
     </div>
   </div>
@@ -102,7 +102,7 @@
     </div>
     <div>
       <p class="font-display uppercase text-sm text-ink mb-3">Horario</p>
-      <p class="text-sm text-mute">Lun–Vie 09:00–18:30<br>Sáb 09:00–14:00</p>
+      <p class="text-sm text-mute">Lun–Vie 09:00–18:30</p>
     </div>
   </div>
   <div class="hazard-strip h-1"></div>
@@ -120,7 +120,6 @@
   const grid = document.getElementById('catalogGrid');
   const emptyState = document.getElementById('emptyState');
   const resultsCount = document.getElementById('resultsCount');
-  const fmt = n => n.toLocaleString('es-CL');
 
   NEXOPARTS_BRANDS.forEach(b => {
     const opt = document.createElement('option');
@@ -165,14 +164,15 @@
       <div class="part-card bg-surface border border-line rounded-sm p-5 flex flex-col">
         <div class="aspect-[4/3] bg-base rounded-sm border border-line mb-4 flex items-center justify-center overflow-hidden relative">
           <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover"
+               onmouseenter="this.src='${p.img2}'" onmouseleave="this.src='${p.img}'"
                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div style="display:none" class="w-full h-full items-center justify-center text-mute font-mono text-[10px] uppercase text-center px-2">Foto pendiente<br>${p.sku}</div>
         </div>
         <span class="font-mono text-[11px] text-steel">${p.brand.toUpperCase()} · ${p.sku}</span>
-        <h3 class="font-display uppercase text-base mt-1">${p.name}</h3>
+        <h3 class="font-display uppercase text-base mt-1 text-white">${p.name}</h3>
         <p class="text-mute text-xs mt-1">${p.fits}</p>
         <div class="mt-auto pt-4 flex items-center justify-between gap-2">
-          <span class="font-mono text-ink">$${fmt(p.price)}</span>
+          <span class="font-mono text-[11px] text-hazard uppercase">${p.stock === 1 ? 'Última unidad' : 'Stock: ' + p.stock}</span>
           <a href="${waLink(p)}" target="_blank" rel="noopener" class="btn-primary bg-orange text-base font-display uppercase text-xs font-600 px-3 py-2 rounded-sm whitespace-nowrap">Consultar</a>
         </div>
       </div>
