@@ -284,12 +284,12 @@
   NEXOPARTS_PRODUCTS.slice(0, 4).forEach(p => {
     featuredGrid.insertAdjacentHTML('beforeend', `
       <div class="part-card bg-surface border border-line rounded-sm p-5 flex flex-col">
-        <div class="aspect-[4/3] bg-base rounded-sm border border-line mb-4 flex items-center justify-center overflow-hidden">
+        <a href="catalogo.html" class="aspect-[3/4] bg-base rounded-sm border border-line mb-4 flex items-center justify-center overflow-hidden glow-hover">
           <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover"
                onmouseenter="this.src='${p.img2}'" onmouseleave="this.src='${p.img}'"
                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div style="display:none" class="w-full h-full items-center justify-center text-mute font-mono text-[10px] uppercase text-center px-2">Foto pendiente<br>${p.sku}</div>
-        </div>
+        </a>
         <span class="font-mono text-[11px] text-steel">${p.brand.toUpperCase()} · ${p.sku}</span>
         <h3 class="font-display uppercase text-base mt-1 text-white">${p.name}</h3>
         <p class="text-mute text-xs mt-1">${p.fits}</p>
