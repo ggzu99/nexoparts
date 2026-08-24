@@ -16,8 +16,8 @@
 //   img2     -> segunda foto (se muestra al pasar el mouse sobre la primera)
 //
 // FOTOS:
-//   Van dentro de "images/productos/", nombradas como <ID>_1.jpg y <ID>_2.jpg
-//   (ej: images/productos/45022_1.jpg, images/productos/45022_2.jpg).
+//   Van dentro de "images/productos/", nombradas como <ID>_1.jpeg y <ID>_2.jpeg
+//   (ej: images/productos/45022_1.jpeg, images/productos/45022_2.jpeg).
 //   Si falta alguna, se muestra automáticamente un aviso "Foto pendiente"
 //   en vez de romper el diseño.
 //
@@ -38,8 +38,8 @@ const NEXOPARTS_PRODUCTS = [
     sku: "45022",
     fits: "H100 Porter (2005–2023)",
     stock: 1,
-    img: "images/productos/45022_1.jpg",
-    img2: "images/productos/45022_2.jpg"
+    img: "images/productos/45022_1.jpeg",
+    img2: "images/productos/45022_2.jpeg"
   },
   {
     id: "45052",
@@ -49,8 +49,8 @@ const NEXOPARTS_PRODUCTS = [
     sku: "45052",
     fits: "Frontier (2005–2012)",
     stock: 1,
-    img: "images/productos/45052_1.jpg",
-    img2: "images/productos/45052_2.jpg"
+    img: "images/productos/45052_1.jpeg",
+    img2: "images/productos/45052_2.jpeg"
   },
   {
     id: "45019",
@@ -60,8 +60,8 @@ const NEXOPARTS_PRODUCTS = [
     sku: "45019",
     fits: "Porter HR (2014–2025)",
     stock: 2,
-    img: "images/productos/45019_1.jpg",
-    img2: "images/productos/45019_2.jpg"
+    img: "images/productos/45019_1.jpeg",
+    img2: "images/productos/45019_2.jpeg"
   },
   {
     id: "45023",
@@ -71,8 +71,8 @@ const NEXOPARTS_PRODUCTS = [
     sku: "45023",
     fits: "Porter (2005–2023)",
     stock: 2,
-    img: "images/productos/45023_1.jpg",
-    img2: "images/productos/45023_2.jpg"
+    img: "images/productos/45023_1.jpeg",
+    img2: "images/productos/45023_2.jpeg"
   },
   {
     id: "45096",
@@ -82,8 +82,8 @@ const NEXOPARTS_PRODUCTS = [
     sku: "45096",
     fits: "Hilux (2005–2015)",
     stock: 2,
-    img: "images/productos/45096_1.jpg",
-    img2: "images/productos/45096_2.jpg"
+    img: "images/productos/45096_1.jpeg",
+    img2: "images/productos/45096_2.jpeg"
   },
   {
     id: "45029",
@@ -93,8 +93,8 @@ const NEXOPARTS_PRODUCTS = [
     sku: "45029",
     fits: "Tucson (2009–2015)",
     stock: 2,
-    img: "images/productos/45029_1.jpg",
-    img2: "images/productos/45029_2.jpg"
+    img: "images/productos/45029_1.jpeg",
+    img2: "images/productos/45029_2.jpeg"
   },
   {
     id: "45026",
@@ -104,8 +104,8 @@ const NEXOPARTS_PRODUCTS = [
     sku: "45026",
     fits: "H100 Porter (1996–2005)",
     stock: 1,
-    img: "images/productos/45026_1.jpg",
-    img2: "images/productos/45026_2.jpg"
+    img: "images/productos/45026_1.jpeg",
+    img2: "images/productos/45026_2.jpeg"
   },
   {
     id: "45040",
@@ -115,8 +115,8 @@ const NEXOPARTS_PRODUCTS = [
     sku: "45040",
     fits: "Accent (2006–2011)",
     stock: 1,
-    img: "images/productos/45040_1.jpg",
-    img2: "images/productos/45040_2.jpg"
+    img: "images/productos/45040_1.jpeg",
+    img2: "images/productos/45040_2.jpeg"
   },
   {
     id: "45089",
@@ -126,8 +126,8 @@ const NEXOPARTS_PRODUCTS = [
     sku: "45089",
     fits: "Sail 1.4 (2011–2017)",
     stock: 2,
-    img: "images/productos/45089_1.jpg",
-    img2: "images/productos/45089_2.jpg"
+    img: "images/productos/45089_1.jpeg",
+    img2: "images/productos/45089_2.jpeg"
   },
   {
     id: "45028",
@@ -137,8 +137,8 @@ const NEXOPARTS_PRODUCTS = [
     sku: "45028",
     fits: "Accent RB (2011–2020)",
     stock: 2,
-    img: "images/productos/45028_1.jpg",
-    img2: "images/productos/45028_2.jpg"
+    img: "images/productos/45028_1.jpeg",
+    img2: "images/productos/45028_2.jpeg"
   },
   {
     id: "45025",
@@ -148,8 +148,8 @@ const NEXOPARTS_PRODUCTS = [
     sku: "45025",
     fits: "H100 Porter (1996–2005) / Grace Van (1993–2004)",
     stock: 1,
-    img: "images/productos/45025_1.jpg",
-    img2: "images/productos/45025_2.jpg"
+    img: "images/productos/45025_1.jpeg",
+    img2: "images/productos/45025_2.jpeg"
   },
   {
     id: "45020",
@@ -159,8 +159,8 @@ const NEXOPARTS_PRODUCTS = [
     sku: "45020",
     fits: "Frontier II (2005–2014)",
     stock: 1,
-    img: "images/productos/45020_1.jpg",
-    img2: "images/productos/45020_2.jpg"
+    img: "images/productos/45020_1.jpeg",
+    img2: "images/productos/45020_2.jpeg"
   },
   {
     id: "45039",
@@ -170,8 +170,8 @@ const NEXOPARTS_PRODUCTS = [
     sku: "45039",
     fits: "Accent (2000–2006)",
     stock: 1,
-    img: "images/productos/45039_1.jpg",
-    img2: "images/productos/45039_2.jpg"
+    img: "images/productos/45039_1.jpeg",
+    img2: "images/productos/45039_2.jpeg"
   }
 ];
 
