@@ -420,6 +420,18 @@
 
   function initYear() { var y = $("#year"); if (y) y.textContent = new Date().getFullYear(); }
 
+  /* Espacios publicitarios: solo se activan los que tienen data-ad-slot.
+     Los vacíos quedan ocultos para no mostrar huecos en blanco. */
+  function initAds() {
+    var slots = document.querySelectorAll(".ad-slot");
+    for (var i = 0; i < slots.length; i++) {
+      var ins = slots[i].querySelector("ins.adsbygoogle");
+      if (!ins || !ins.getAttribute("data-ad-slot")) continue;
+      slots[i].classList.add("is-on");
+      try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
+    }
+  }
+
   function boot() {
     safe(initSplash, "splash");
     safe(initHeader, "header");
@@ -437,6 +449,7 @@
     safe(initForm, "form");
     safe(initGsap, "gsap");
     safe(initYear, "year");
+    safe(initAds, "ads");
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
