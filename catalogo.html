@@ -1,226 +1,172 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CL">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catálogo — Nexoparts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Catálogo de repuestos — Nexoparts</title>
+<meta name="description" content="Busca chapas de contacto, cilindros y repuestos por marca, tipo de pieza o SKU. Fotos reales y stock verificado. Nexoparts, Santiago.">
+<meta name="theme-color" content="#0D0B0A">
+<meta property="og:title" content="Nexoparts — La pieza exacta, a la primera">
+<meta property="og:description" content="Repuestos con stock real y compatibilidad confirmada. Ñuñoa, Santiago · Despacho a todo Chile.">
+<meta property="og:image" content="images/productos/45052_1.jpeg">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="icon" type="image/png" href="images/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261113b">
+<script>document.documentElement.classList.add('js');</script>
 </head>
-<body class="font-body bg-base text-ink antialiased">
-<div class="grain"></div>
-<div id="spotlight" class="spotlight"></div>
+<body>
 
-<div class="hidden sm:block bg-surface2 border-b border-line text-xs">
-  <div class="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between text-mute font-mono">
-    <span>ÑUÑOA, SANTIAGO · DESPACHO A TODO CHILE</span>
-    <div class="flex items-center gap-6">
-      <span>LUN–VIE 09:00–18:30</span>
-      <a href="tel:+56999555599" class="text-hazard hover:text-orange">+56 9 9955 5599</a>
+<!-- Iconos (se reutilizan con <use href="#i-...">) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.59-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V6l-8-3z M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3 8h3.5L8 5.5h8L17.5 8H21v11H3z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h12v10H2zM14 10h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="6" cy="18" r="2" fill="var(--bg-2)" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="18" r="2" fill="var(--bg-2)" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8 10h8M8 13h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m3 6 9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M11.5 12H21M17 12v3M20 12v2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z M4 7.5l8 4.5 8-4.5 M12 12v9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 9a8 8 0 0 1 14-3l2 2M20 15a8 8 0 0 1-14 3l-2-2M20 4v4h-4M4 20v-4h4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<!-- ============ CABECERA ============ -->
+<header class="header" id="header">
+  <div class="wrap header-inner">
+    <a href="index.html#top" class="brand" aria-label="Nexoparts, ir al inicio">
+      <img src="images/logo-sm.png" alt="" width="46" height="31">
+      <span class="brand-word">NEXO<b>PARTS</b></span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="catalogo.html" class="is-active" aria-current="page">Catálogo</a>
+      <a href="index.html#confianza">Por qué nosotros</a>
+      <a href="index.html#como-comprar">Cómo comprar</a>
+      <a href="index.html#opiniones">Opiniones</a>
+      <a href="index.html#preguntas">Preguntas</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center">
+      <a href="index.html#contacto" class="btn btn--primary btn--sm header-cta" data-magnetic>Cotizar pieza <svg class="arrow"><use href="#i-arrow"/></svg></a>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
     </div>
   </div>
-</div>
-
-<header class="sticky top-0 z-50 bg-base/95 backdrop-blur border-b border-line">
-  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href="index.html" class="flex items-center gap-2">
-      <img src="images/logo.png" alt="Nexoparts" class="h-8 w-auto">
-      <span class="font-display font-700 text-2xl tracking-tight text-ink">NEXO<span class="text-orange">PARTS</span></span>
-    </a>
-    <nav class="hidden md:flex items-center gap-8 font-display uppercase text-sm tracking-wide text-mute">
-      <a href="catalogo.html" class="link-underline text-ink px-1 py-1 rounded-sm glow-hover">Catálogo</a>
-      <a href="contacto.html" class="link-underline hover:text-ink px-1 py-1 rounded-sm glow-hover">Contacto</a>
-    </nav>
-    <button id="menuBtn" aria-label="Abrir menú" class="md:hidden text-ink glow-hover rounded-sm p-1">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
-  </div>
-  <nav id="mobileMenu" class="hidden md:hidden border-t border-line bg-surface font-display uppercase text-sm tracking-wide">
-    <a href="catalogo.html" class="block px-6 py-3 text-ink border-b border-line glow-hover">Catálogo</a>
-    <a href="contacto.html" class="block px-6 py-3 text-mute hover:text-ink glow-hover">Contacto</a>
-  </nav>
 </header>
 
-<main>
-<section class="border-b border-line">
-  <div class="max-w-7xl mx-auto px-6 py-10">
-    <span class="font-mono text-xs text-steel">CATÁLOGO COMPLETO</span>
-    <h1 class="font-display font-700 uppercase text-3xl sm:text-4xl mt-2 mb-8">Filtra por marca, pieza o SKU</h1>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Menú móvil">
+  <a class="mm-link" href="catalogo.html"><small>01</small>Catálogo</a>
+  <a class="mm-link" href="index.html#confianza"><small>02</small>Por qué nosotros</a>
+  <a class="mm-link" href="index.html#como-comprar"><small>03</small>Cómo comprar</a>
+  <a class="mm-link" href="index.html#preguntas"><small>04</small>Preguntas</a>
+  <a class="mm-link" href="index.html#contacto"><small>05</small>Contacto</a>
+  <div class="mm-foot">
+    <a class="btn btn--primary btn--block" href="https://wa.me/56999555599" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> Escríbenos por WhatsApp</a>
+    <p class="mono muted" style="font-size:12px;text-align:center">Lun–Vie 09:00–18:30 · Ñuñoa, Santiago</p>
+  </div>
+</nav>
 
-    <!-- FUNCTIONAL FILTER BAR -->
-    <div class="bg-surface border border-line rounded-sm p-4 sm:p-5 grid grid-cols-1 sm:grid-cols-4 gap-3 items-end">
-      <div>
-        <label for="fMarca" class="font-mono text-[11px] text-mute uppercase">Marca</label>
-        <select id="fMarca" class="field mt-1"><option value="">Todas las marcas</option></select>
-      </div>
-      <div>
-        <label for="fCategoria" class="font-mono text-[11px] text-mute uppercase">Pieza</label>
-        <select id="fCategoria" class="field mt-1"><option value="">Todas las piezas</option></select>
-      </div>
-      <div>
-        <label for="fQ" class="font-mono text-[11px] text-mute uppercase">SKU o palabra clave</label>
-        <input id="fQ" type="text" placeholder="Ej: WPT-057, pastillas..." class="field mt-1 vin-input">
-      </div>
-      <button id="clearFilters" class="glow-hover border border-line rounded-sm px-4 py-2.5 font-display uppercase text-sm text-mute">Limpiar filtros</button>
-    </div>
-
-    <p id="resultsCount" class="font-mono text-xs text-mute mt-5"></p>
+<main id="top">
+<section class="page-hero">
+  <div class="hero-mesh" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="kicker">Catálogo completo · stock real</span>
+    <h1 class="h-display">Encuentra tu <span class="em-accent">pieza.</span></h1>
+    <p class="lead">Filtra por marca, tipo de pieza o escribe el modelo de tu auto o el SKU. Todos los precios incluyen IVA. Toca “Pedir” y te confirmamos compatibilidad y stock antes de pagar.</p>
   </div>
 </section>
 
-<section class="border-b border-line">
-  <div class="max-w-7xl mx-auto px-6 py-10">
-    <div id="catalogGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
-    <div id="emptyState" class="hidden text-center py-16">
-      <p class="font-display uppercase text-xl text-mute">No encontramos piezas con esos filtros</p>
-      <p class="text-mute text-sm mt-2">Escríbenos el modelo de tu auto y la pieza que buscas, la agregamos al catálogo.</p>
-      <a href="contacto.html" class="inline-block mt-5 btn-primary bg-orange text-base font-display uppercase text-sm font-600 px-6 py-3 rounded-sm">Consultar por esta pieza</a>
+<div class="toolbar">
+  <div class="wrap">
+    <label class="search"><span class="sr-only">Buscar por modelo, año o SKU</span><svg><use href="#i-search"/></svg><input class="input" id="fQ" type="search" placeholder="Modelo, año o SKU — ej: Porter, 45052" autocomplete="off"></label>
+    <label><span class="sr-only">Marca</span><select class="input" id="fMarca" data-fill="brands"><option value="">Todas las marcas</option></select></label>
+    <label><span class="sr-only">Tipo de pieza</span><select class="input" id="fCat" data-fill="cats"><option value="">Todas las piezas</option></select></label>
+    <span class="count" id="resultCount" aria-live="polite"></span>
+  </div>
+</div>
+
+<section class="section--tight">
+  <div class="wrap">
+    <div class="pgrid" id="fullGrid">
+      <noscript><p class="muted">Para ver el catálogo activa JavaScript o escríbenos por <a href="https://wa.me/56999555599" style="color:var(--accent)">WhatsApp</a>.</p></noscript>
+    </div>
+    <div class="empty" id="emptyState">
+      <h3>No encontramos esa pieza en el catálogo</h3>
+      <p>Puede que la tengamos igual. Escríbenos con marca, modelo y año y te respondemos.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center">
+        <button type="button" class="btn btn--ghost" id="resetFilters">Limpiar filtros</button>
+        <a class="btn btn--primary" href="https://wa.me/56999555599?text=Hola%20Nexoparts%2C%20busco%20una%20pieza%20que%20no%20encuentro%20en%20el%20cat%C3%A1logo%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> Preguntar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2 class="h-display h2 rv">¿No sabes cuál es <span class="em-accent">tu pieza?</span></h2>
+    <p class="lead rv" data-d="1">Mándanos una foto de la pieza vieja y el año de tu auto. Nosotros la identificamos.</p>
+    <div class="hero-actions rv" data-d="2">
+      <a href="https://wa.me/56999555599?text=Hola%20Nexoparts%2C%20les%20mando%20foto%20de%20mi%20pieza.%20Mi%20auto%20es%3A%20" target="_blank" rel="noopener" class="btn btn--primary" data-magnetic><svg><use href="#i-wa"/></svg> Enviar foto por WhatsApp</a>
+      <a href="index.html#contacto" class="btn btn--ghost" data-magnetic>Formulario de contacto <svg class="arrow"><use href="#i-arrow"/></svg></a>
     </div>
   </div>
 </section>
 </main>
 
-<footer class="bg-surface2">
-  <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-3 gap-8">
-    <div>
-      <span class="font-display font-700 text-xl">NEXO<span class="text-orange">PARTS</span></span>
-      <p class="text-mute text-sm mt-3 max-w-xs">Ñuñoa, Santiago. Despacho a todo Chile.</p>
-      <p class="font-mono text-xs text-mute mt-4">
-        <a href="tel:+56999555599" class="hover:text-orange">+56 9 9955 5599</a><br>
-        <a href="mailto:nexoparts.spa@gmail.com" class="hover:text-orange">nexoparts.spa@gmail.com</a>
-      </p>
+<!-- ============ PIE ============ -->
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      <a href="index.html#top" class="brand"><img src="images/logo-sm.png" alt="" width="46" height="31"><span class="brand-word">NEXO<b>PARTS</b></span></a>
+      <p>Repuestos automotrices con stock real y compatibilidad confirmada. Ñuñoa, Santiago — despacho a todo Chile.</p>
     </div>
     <div>
-      <p class="font-display uppercase text-sm text-ink mb-3">Navegación</p>
-      <ul class="space-y-2 text-sm text-mute">
-        <li><a href="catalogo.html" class="hover:text-orange">Catálogo</a></li>
-        <li><a href="contacto.html" class="hover:text-orange">Contacto</a></li>
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="index.html#catalogo">Catálogo</a></li>
+        <li><a href="index.html#como-comprar">Cómo comprar</a></li>
+        <li><a href="index.html#preguntas">Preguntas frecuentes</a></li>
+        <li><a href="catalogo.html">Catálogo completo</a></li>
       </ul>
     </div>
     <div>
-      <p class="font-display uppercase text-sm text-ink mb-3">Horario</p>
-      <p class="text-sm text-mute">Lun–Vie 09:00–18:30</p>
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="https://wa.me/56999555599" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="tel:+56999555599">+56 9 9955 5599</a></li>
+        <li><a href="mailto:nexoparts.spa@gmail.com">nexoparts.spa@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Horario</h4>
+      <ul>
+        <li>Lunes a viernes</li>
+        <li>09:00 – 18:30</li>
+      </ul>
     </div>
   </div>
-  <div class="hazard-strip h-1"></div>
-  <div class="max-w-7xl mx-auto px-6 py-5 text-center text-xs font-mono text-mute">
-    © 2026 Nexoparts — Todos los derechos reservados
+  <div class="footer-word" aria-hidden="true">NEXO<b>PARTS</b></div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year">2026</span> Nexoparts · Todos los derechos reservados</span>
+    <span>Hecho en Santiago de Chile</span>
   </div>
 </footer>
 
-<script src="site.js"></script>
-<script src="products.js"></script>
-<script>
-  const fMarca = document.getElementById('fMarca');
-  const fCategoria = document.getElementById('fCategoria');
-  const fQ = document.getElementById('fQ');
-  const grid = document.getElementById('catalogGrid');
-  const emptyState = document.getElementById('emptyState');
-  const resultsCount = document.getElementById('resultsCount');
+<a class="wa-float" id="waFloat" href="https://wa.me/56999555599?text=Hola%20Nexoparts%2C%20busco%20un%20repuesto." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg><use href="#i-wa"/></svg></a>
 
-  NEXOPARTS_BRANDS.forEach(b => {
-    const opt = document.createElement('option');
-    opt.value = b; opt.textContent = b;
-    fMarca.appendChild(opt);
-  });
-  NEXOPARTS_CATEGORIES.forEach(c => {
-    const opt = document.createElement('option');
-    opt.value = c.id; opt.textContent = c.label;
-    fCategoria.appendChild(opt);
-  });
-
-  // Pre-fill filters from URL (?marca=&categoria=&q=) coming from the home page search
-  const params = new URLSearchParams(window.location.search);
-  if (params.get('marca')) fMarca.value = params.get('marca');
-  if (params.get('categoria')) fCategoria.value = params.get('categoria');
-  if (params.get('q')) fQ.value = params.get('q');
-
-  function waLink(p) {
-    const msg = `Hola, quiero consultar disponibilidad de: ${p.name} (SKU ${p.sku}) para ${p.brand} ${p.fits}`;
-    return `https://wa.me/56999555599?text=${encodeURIComponent(msg)}`;
-  }
-
-  // Navega entre las 2 fotos de un producto usando las flechas
-  window.showImage = function (id, dir) {
-    const p = NEXOPARTS_PRODUCTS.find(x => x.id === id);
-    const imgEl = document.getElementById('img-' + id);
-    if (!p || !imgEl) return;
-    const current = imgEl.dataset.current === '2' ? 2 : 1;
-    const next = current === 1 ? 2 : 1;
-    imgEl.src = next === 1 ? p.img : p.img2;
-    imgEl.dataset.current = String(next);
-    const dot1 = document.getElementById('dot-' + id + '-1');
-    const dot2 = document.getElementById('dot-' + id + '-2');
-    if (dot1 && dot2) {
-      dot1.className = next === 1 ? 'w-1.5 h-1.5 rounded-full bg-orange' : 'w-1.5 h-1.5 rounded-full bg-ink/30';
-      dot2.className = next === 2 ? 'w-1.5 h-1.5 rounded-full bg-orange' : 'w-1.5 h-1.5 rounded-full bg-ink/30';
-    }
-  };
-
-  function render() {
-    const marca = fMarca.value;
-    const categoria = fCategoria.value;
-    const q = fQ.value.trim().toLowerCase();
-
-    const results = NEXOPARTS_PRODUCTS.filter(p => {
-      if (marca && p.brand !== marca) return false;
-      if (categoria && p.category !== categoria) return false;
-      if (q) {
-        const haystack = `${p.name} ${p.sku} ${p.brand} ${p.fits}`.toLowerCase();
-        if (!haystack.includes(q)) return false;
-      }
-      return true;
-    });
-
-    resultsCount.textContent = `${results.length} pieza${results.length === 1 ? '' : 's'} encontrada${results.length === 1 ? '' : 's'}`;
-
-    grid.innerHTML = results.map(p => `
-      <div class="part-card bg-surface border border-line rounded-sm p-5 flex flex-col">
-        <div class="aspect-[3/4] bg-base rounded-sm border border-line mb-4 flex items-center justify-center overflow-hidden relative group">
-          <img id="img-${p.id}" data-current="1" src="${p.img}" alt="${p.name}" class="w-full h-full object-cover"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'; this.parentElement.querySelectorAll('.img-arrow,.img-dots').forEach(el => el.style.display='none');">
-          <div style="display:none" class="w-full h-full items-center justify-center text-mute font-mono text-[10px] uppercase text-center px-2">Foto pendiente<br>${p.sku}</div>
-
-          <button type="button" aria-label="Foto anterior" onclick="showImage('${p.id}', -1)"
-            class="img-arrow absolute left-1.5 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-base/70 border border-line flex items-center justify-center text-ink hover:border-orange hover:text-orange transition-colors">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
-          </button>
-          <button type="button" aria-label="Foto siguiente" onclick="showImage('${p.id}', 1)"
-            class="img-arrow absolute right-1.5 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-base/70 border border-line flex items-center justify-center text-ink hover:border-orange hover:text-orange transition-colors">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
-          </button>
-
-          <div class="img-dots absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
-            <span id="dot-${p.id}-1" class="w-1.5 h-1.5 rounded-full bg-orange"></span>
-            <span id="dot-${p.id}-2" class="w-1.5 h-1.5 rounded-full bg-ink/30"></span>
-          </div>
-        </div>
-        <span class="font-mono text-[11px] text-steel">${p.brand.toUpperCase()} · ${p.sku}</span>
-        <h3 class="font-display uppercase text-base mt-1 text-white">${p.name}</h3>
-        <p class="text-mute text-xs mt-1">${p.fits}</p>
-        <div class="mt-auto pt-4 flex items-center justify-between gap-2">
-          <span class="font-mono text-[11px] text-hazard uppercase">${p.stock === 1 ? 'Última unidad' : 'Stock: ' + p.stock}</span>
-          <a href="${waLink(p)}" target="_blank" rel="noopener" class="btn-primary bg-orange text-base font-display uppercase text-xs font-600 px-3 py-2 rounded-sm whitespace-nowrap">Consultar</a>
-        </div>
-      </div>
-    `).join('');
-
-    emptyState.classList.toggle('hidden', results.length > 0);
-  }
-
-  [fMarca, fCategoria].forEach(el => el.addEventListener('change', render));
-  fQ.addEventListener('input', render);
-  document.getElementById('clearFilters').addEventListener('click', () => {
-    fMarca.value = ''; fCategoria.value = ''; fQ.value = '';
-    history.replaceState(null, '', 'catalogo.html');
-    render();
-  });
-
-  render();
-</script>
-
+<script defer src="lib/gsap.min.js"></script>
+<script defer src="lib/ScrollTrigger.min.js"></script>
+<script defer src="products.js?v=20261113b"></script>
+<script defer src="main.js?v=20261113b"></script>
 </body>
 </html>

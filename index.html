@@ -1,306 +1,511 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CL">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nexoparts — Repuestos y Refacciones Automotrices</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nexoparts — Repuestos automotrices con compatibilidad confirmada · Santiago</title>
+<meta name="description" content="Chapas de contacto, cilindros y repuestos para Hyundai, Toyota, Chevrolet y Kia. Fotos reales, stock verificado y compatibilidad confirmada antes de pagar. Despacho a todo Chile.">
+<meta name="theme-color" content="#0D0B0A">
+<meta property="og:title" content="Nexoparts — La pieza exacta, a la primera">
+<meta property="og:description" content="Repuestos con stock real y compatibilidad confirmada. Ñuñoa, Santiago · Despacho a todo Chile.">
+<meta property="og:image" content="images/productos/45052_1.jpeg">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="icon" type="image/png" href="images/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/productos/45052_1.jpeg">
+<link rel="stylesheet" href="styles.css?v=20261113b">
+<script>document.documentElement.classList.add('js');</script>
 </head>
-<body class="font-body bg-base text-ink antialiased">
-<div class="grain"></div>
-<div id="spotlight" class="spotlight"></div>
+<body>
 
-<!-- TOP UTILITY BAR -->
-<div class="hidden sm:block bg-surface2 border-b border-line text-xs">
-  <div class="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between text-mute font-mono">
-    <span>ÑUÑOA, SANTIAGO · DESPACHO A TODO CHILE</span>
-    <div class="flex items-center gap-6">
-      <span>LUN–VIE 09:00–18:30</span>
-      <a href="tel:+56999555599" class="text-hazard hover:text-orange">+56 9 9955 5599</a>
-    </div>
+<!-- Iconos (se reutilizan con <use href="#i-...">) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.59-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V6l-8-3z M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3 8h3.5L8 5.5h8L17.5 8H21v11H3z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h12v10H2zM14 10h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="6" cy="18" r="2" fill="var(--bg-2)" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="18" r="2" fill="var(--bg-2)" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8 10h8M8 13h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m3 6 9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M11.5 12H21M17 12v3M20 12v2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z M4 7.5l8 4.5 8-4.5 M12 12v9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 9a8 8 0 0 1 14-3l2 2M20 15a8 8 0 0 1-14 3l-2-2M20 4v4h-4M4 20v-4h4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<!-- Pantalla de carga (se oculta sola aunque falle el JS) -->
+<div class="splash" id="splash" aria-hidden="true">
+  <div class="splash-inner">
+    <img src="images/logo-sm.png" alt="" width="120" height="80">
+    <div class="splash-bar"><span></span></div>
+    <span class="splash-label">Encendiendo</span>
   </div>
 </div>
 
-<!-- HEADER -->
-<header class="sticky top-0 z-50 bg-base/95 backdrop-blur border-b border-line">
-  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href="index.html" class="flex items-center gap-2">
-      <img src="images/logo.png" alt="Nexoparts" class="h-8 w-auto">
-      <span class="font-display font-700 text-2xl tracking-tight text-ink">NEXO<span class="text-orange">PARTS</span></span>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<!-- ============ CABECERA ============ -->
+<header class="header" id="header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand" aria-label="Nexoparts, ir al inicio">
+      <img src="images/logo-sm.png" alt="" width="46" height="31">
+      <span class="brand-word">NEXO<b>PARTS</b></span>
     </a>
-    <nav class="hidden md:flex items-center gap-8 font-display uppercase text-sm tracking-wide text-mute">
-      <a href="catalogo.html" class="link-underline hover:text-ink px-1 py-1 rounded-sm glow-hover">Catálogo</a>
-      <a href="contacto.html" class="link-underline hover:text-ink px-1 py-1 rounded-sm glow-hover">Contacto</a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#confianza">Por qué nosotros</a>
+      <a href="#como-comprar">Cómo comprar</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#preguntas">Preguntas</a>
     </nav>
-    <div class="flex items-center gap-4">
-      <a href="catalogo.html" class="hidden sm:flex items-center gap-2 text-ink font-mono text-sm border border-line rounded px-3 py-1.5 glow-hover">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-        Catálogo
-      </a>
-      <button id="menuBtn" aria-label="Abrir menú" class="md:hidden text-ink glow-hover rounded-sm p-1">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
+    <div style="display:flex;gap:10px;align-items:center">
+      <a href="#contacto" class="btn btn--primary btn--sm header-cta" data-magnetic>Cotizar pieza <svg class="arrow"><use href="#i-arrow"/></svg></a>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
     </div>
   </div>
-  <nav id="mobileMenu" class="hidden md:hidden border-t border-line bg-surface font-display uppercase text-sm tracking-wide">
-    <a href="catalogo.html" class="block px-6 py-3 text-mute hover:text-ink border-b border-line glow-hover">Catálogo</a>
-    <a href="contacto.html" class="block px-6 py-3 text-mute hover:text-ink glow-hover">Contacto</a>
-  </nav>
 </header>
+
+<nav class="mobile-menu" id="mobileMenu" aria-label="Menú móvil">
+  <a class="mm-link" href="#catalogo"><small>01</small>Catálogo</a>
+  <a class="mm-link" href="#confianza"><small>02</small>Por qué nosotros</a>
+  <a class="mm-link" href="#como-comprar"><small>03</small>Cómo comprar</a>
+  <a class="mm-link" href="#preguntas"><small>04</small>Preguntas</a>
+  <a class="mm-link" href="#contacto"><small>05</small>Contacto</a>
+  <div class="mm-foot">
+    <a class="btn btn--primary btn--block" href="https://wa.me/56999555599" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> Escríbenos por WhatsApp</a>
+    <p class="mono muted" style="font-size:12px;text-align:center">Lun–Vie 09:00–18:30 · Ñuñoa, Santiago</p>
+  </div>
+</nav>
 
 <main id="top">
 
-<!-- HERO -->
-<section class="relative border-b border-line overflow-hidden">
-  <div class="max-w-7xl mx-auto px-6 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- ============ PORTADA ============ -->
+<section class="hero" id="hero">
+  <div class="hero-bg" aria-hidden="true"><img src="images/hero.jpg" alt="" data-parallax="0.15"></div>
+  <div class="hero-tint" aria-hidden="true"></div>
+  <div class="hero-mesh" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-spot" aria-hidden="true"></div>
 
-    <div class="lg:col-span-7">
-      <h1 class="font-display font-700 uppercase leading-[0.95] text-4xl sm:text-5xl lg:text-6xl text-ink">
-        Encuentra la pieza exacta,<br class="hidden sm:block"> no una aproximada.
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="status-pill" id="statusPill"><span class="status-dot"></span><span id="statusText">Lun–Vie 09:00–18:30<span class="sp-extra"> · Despacho a todo Chile</span></span></span>
+
+      <h1 class="h-display hero-title">
+        <span class="line"><span>Repuestos que</span></span>
+        <span class="line"><span><span class="underline-wrap em-accent">calzan<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 14C50 5 120 3 197 10"/></svg></span></span></span>
+        <span class="line"><span>a la primera.</span></span>
       </h1>
-      <p class="mt-6 text-mute text-base sm:text-lg max-w-xl">
-        Filtra el catálogo por marca de tu auto y tipo de pieza. Stock verificado, sin promesas de "puede que llegue".
-      </p>
 
-      <!-- FUNCTIONAL SEARCH -> redirects to catalogo.html with filters applied -->
-      <form id="heroSearch" action="catalogo.html" method="get" class="mt-8 bg-surface border border-line rounded-sm p-4 sm:p-5 max-w-xl">
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <div>
-            <label for="marca" class="font-mono text-[11px] text-mute uppercase">Marca</label>
-            <select id="marca" name="marca" class="field mt-1">
-              <option value="">Todas las marcas</option>
-            </select>
-          </div>
-          <div>
-            <label for="categoria" class="font-mono text-[11px] text-mute uppercase">Pieza</label>
-            <select id="categoria" name="categoria" class="field mt-1">
-              <option value="">Todas las piezas</option>
-            </select>
-          </div>
-          <div>
-            <label for="q" class="font-mono text-[11px] text-mute uppercase">SKU o palabra clave</label>
-            <input id="q" name="q" type="text" placeholder="Ej: WPT-057" class="field mt-1 vin-input">
-          </div>
+      <p class="lead hero-sub">Chapas de contacto, cilindros y repuestos para tu Hyundai, Toyota, Chevrolet o Kia. Te confirmamos compatibilidad y stock <strong style="color:var(--ink)">antes de que pagues</strong> — sin “puede que le sirva”.</p>
+
+      <div class="hero-actions">
+        <a href="#catalogo" class="btn btn--primary" data-magnetic>Explorar catálogo <svg class="arrow"><use href="#i-arrow"/></svg></a>
+        <a href="https://wa.me/56999555599?text=Hola%20Nexoparts%2C%20busco%20un%20repuesto%20para%20mi%20auto." target="_blank" rel="noopener" class="btn btn--ghost btn--wa" data-magnetic><svg><use href="#i-wa"/></svg> Cotizar por WhatsApp</a>
+      </div>
+
+      <form class="hero-search" action="catalogo.html" method="get" role="search" aria-label="Buscar repuesto">
+        <div class="hs-field">
+          <label for="hs-marca">Marca</label>
+          <select id="hs-marca" name="marca" data-fill="brands"><option value="">Todas</option><option>Hyundai</option><option>Toyota</option><option>Chevrolet</option><option>Kia</option></select>
         </div>
-        <button type="submit" class="btn-primary w-full sm:w-auto mt-4 bg-orange text-base font-display uppercase tracking-wide text-sm font-600 px-6 py-3 rounded-sm">Buscar en el catálogo</button>
+        <div class="hs-field">
+          <label for="hs-cat">Pieza</label>
+          <select id="hs-cat" name="categoria" data-fill="cats"><option value="">Todas</option></select>
+        </div>
+        <div class="hs-field">
+          <label for="hs-q">Modelo o SKU</label>
+          <input id="hs-q" name="q" type="text" placeholder="Ej: Porter, 45052" autocomplete="off">
+        </div>
+        <button type="submit" class="btn btn--primary"><svg><use href="#i-search"/></svg><span class="sr-only">Buscar</span><span aria-hidden="true">Buscar</span></button>
       </form>
-
-      <!-- STAMPED SPEC PLATE -->
-      <div class="plate rounded-sm mt-10 px-8 py-6 grid grid-cols-2 gap-4 max-w-xl">
-        <div class="rivet-tl"></div><div class="rivet-tr"></div><div class="rivet-bl"></div><div class="rivet-br"></div>
-        <div>
-          <p class="font-display text-2xl sm:text-3xl text-orange">TODO CHILE</p>
-          <p class="font-mono text-[11px] text-mute uppercase tracking-wide mt-1">Despacho a domicilio</p>
-        </div>
-        <a href="https://wa.me/56999555599" target="_blank" rel="noopener" class="block glow-hover rounded-sm -m-2 p-2">
-          <p class="font-display text-2xl sm:text-3xl text-hazard">PEDIDOS</p>
-          <p class="font-mono text-[11px] text-mute uppercase tracking-wide mt-1">Haz tu pedido por WhatsApp →</p>
-        </a>
-      </div>
     </div>
 
-    <!-- HERO IMAGE -->
-    <div class="lg:col-span-5">
-      <!--
-        IMAGEN DEL INICIO: pon la foto que quieras mostrar aquí en
-        images/hero.jpg (ideal: horizontal o cuadrada, buena luz, sin texto encima).
-        Si el archivo no existe, se muestra automáticamente el diagrama técnico como respaldo.
-      -->
-      <div class="bg-surface border border-line rounded-sm overflow-hidden relative aspect-[4/3] lg:aspect-[6/5]">
-        <img src="images/hero.jpg" alt="Repuestos Nexoparts" class="w-full h-full object-cover"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div style="display:none" class="blueprint-grid p-6 h-full">
-          <p class="font-mono text-[11px] text-steel uppercase tracking-wide mb-2">Fig. 03 — Sistema de freno delantero</p>
-          <svg viewBox="0 0 380 340" class="w-full h-auto" role="img" aria-label="Diagrama técnico de sistema de freno delantero con disco, pastillas y caliper">
-            <circle cx="190" cy="150" r="95" fill="none" stroke="#4C7A9E" stroke-width="1.5"/>
-            <circle cx="190" cy="150" r="70" fill="none" stroke="#4C7A9E" stroke-width="1"/>
-            <circle cx="190" cy="150" r="28" fill="none" stroke="#8A9099" stroke-width="1.5"/>
-            <circle cx="190" cy="150" r="6" fill="#8A9099"/>
-            <g stroke="#8A9099" stroke-width="1">
-              <line x1="190" y1="55" x2="190" y2="85"/>
-              <line x1="190" y1="215" x2="190" y2="245"/>
-              <line x1="95" y1="150" x2="125" y2="150"/>
-              <line x1="255" y1="150" x2="285" y2="150"/>
-            </g>
-            <rect x="150" y="122" width="26" height="56" rx="3" fill="none" stroke="#F2B705" stroke-width="1.5"/>
-            <rect x="204" y="122" width="26" height="56" rx="3" fill="none" stroke="#F2B705" stroke-width="1.5"/>
-            <rect x="140" y="112" width="100" height="76" rx="6" fill="none" stroke="#FF5A1F" stroke-width="1.5" stroke-dasharray="3 3"/>
-            <line x1="190" y1="55" x2="80" y2="30" stroke="#4C7A9E" stroke-width="0.75" stroke-dasharray="2 2"/>
-            <text x="20" y="26" font-family="IBM Plex Mono" font-size="10" fill="#4C7A9E">01 · DISCO VENTILADO</text>
-            <line x1="140" y1="150" x2="40" y2="150" stroke="#F2B705" stroke-width="0.75" stroke-dasharray="2 2"/>
-            <text x="10" y="146" font-family="IBM Plex Mono" font-size="10" fill="#F2B705">02 · PASTILLAS</text>
-            <line x1="240" y1="150" x2="345" y2="150" stroke="#FF5A1F" stroke-width="0.75" stroke-dasharray="2 2"/>
-            <text x="256" y="146" font-family="IBM Plex Mono" font-size="10" fill="#FF5A1F">03 · CALIPER</text>
-            <line x1="190" y1="245" x2="270" y2="300" stroke="#8A9099" stroke-width="0.75" stroke-dasharray="2 2"/>
-            <text x="238" y="315" font-family="IBM Plex Mono" font-size="10" fill="#8A9099">04 · PERNO GUÍA</text>
-          </svg>
-        </div>
+    <div class="hero-stage" aria-label="Pieza destacada">
+      <svg class="stage-orbit" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" stroke-width="2.2" pathLength="360" stroke-dasharray="0.6 5.4"/>
+        <circle class="tick-hot" cx="50" cy="50" r="48" fill="none" stroke="currentColor" stroke-width="2.2" pathLength="360" stroke-dasharray="0.6 5.4 0.6 5.4 0.6 5.4 0.6 5.4 0.6 5.4 0.6 5.4 0 324"/>
+        <circle cx="50" cy="50" r="44.5" fill="none" stroke="currentColor" stroke-width=".25"/>
+      </svg>
+      <div class="stage-card" data-tilt="8">
+        <img src="images/productos/45052_1.jpeg" alt="Set chapa de contacto, cilindros y llaves para Hyundai Frontier 2005–2012, foto real" width="900" height="1600" fetchpriority="high">
       </div>
+      <div class="stage-chip stage-chip--a"><span class="ico"><svg><use href="#i-key"/></svg></span><span><small>SKU 45052</small><strong>Hyundai Frontier 05–12</strong></span></div>
+      <div class="stage-chip stage-chip--b"><span class="ico"><svg><use href="#i-check"/></svg></span><span><small>Antes de pagar</small><strong>Compatibilidad verificada</strong></span></div>
+      <div class="stage-chip stage-chip--c"><span class="ico"><svg><use href="#i-camera"/></svg></span><span><small>Sin catálogo genérico</small><strong>Foto real de la pieza</strong></span></div>
     </div>
-
   </div>
-  <div class="hazard-strip h-1.5 w-full"></div>
-</section>
 
-<!-- BRAND MARQUEE -->
-<section class="border-b border-line bg-surface2 py-5">
-  <p class="text-center font-mono text-[11px] text-mute uppercase tracking-widest mb-3">Manejamos stock para estas marcas</p>
-  <div class="marquee-wrap">
-    <div class="marquee-track font-display uppercase text-lg sm:text-xl tracking-widest text-mute gap-16 pr-16">
-      <span id="marqueeSetA" class="flex gap-16"></span>
-      <span id="marqueeSetB" class="flex gap-16"></span>
+  <div class="hero-stats">
+    <div class="wrap">
+      <div class="stat"><span class="stat-num"><span data-count="13" id="statProducts">13</span><em>+</em></span><span class="stat-label">Piezas en stock</span></div>
+      <div class="stat"><span class="stat-num"><span data-count="4" id="statBrands">4</span></span><span class="stat-label">Marcas atendidas</span></div>
+      <div class="stat"><span class="stat-num"><span data-count="100">100</span><em>%</em></span><span class="stat-label">Fotos reales</span></div>
+      <div class="stat"><span class="stat-num">Todo <em>Chile</em></span><span class="stat-label">Despacho a domicilio</span></div>
     </div>
   </div>
 </section>
 
-<!-- FEATURED PRODUCTS -->
-<section class="border-b border-line">
-  <div class="max-w-7xl mx-auto px-6 py-16">
-    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+<!-- ============ MARCAS ============ -->
+<section class="marquee" aria-label="Marcas con stock">
+  <div class="marquee-track">
+    <div class="marquee-set">
+      <span class="marquee-item">Hyundai</span><i class="marquee-sep"></i>
+      <span class="marquee-item">Toyota</span><i class="marquee-sep"></i>
+      <span class="marquee-item">Chevrolet</span><i class="marquee-sep"></i>
+      <span class="marquee-item">Kia</span><i class="marquee-sep"></i>
+      <span class="marquee-item">Porter</span><i class="marquee-sep"></i>
+      <span class="marquee-item">Hilux</span><i class="marquee-sep"></i>
+      <span class="marquee-item">Accent</span><i class="marquee-sep"></i>
+      <span class="marquee-item">Sail</span><i class="marquee-sep"></i>
+    </div>
+    <div class="marquee-set" aria-hidden="true">
+      <span class="marquee-item">Hyundai</span><i class="marquee-sep"></i>
+      <span class="marquee-item">Toyota</span><i class="marquee-sep"></i>
+      <span class="marquee-item">Chevrolet</span><i class="marquee-sep"></i>
+      <span class="marquee-item">Kia</span><i class="marquee-sep"></i>
+      <span class="marquee-item">Porter</span><i class="marquee-sep"></i>
+      <span class="marquee-item">Hilux</span><i class="marquee-sep"></i>
+      <span class="marquee-item">Accent</span><i class="marquee-sep"></i>
+      <span class="marquee-item">Sail</span><i class="marquee-sep"></i>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATÁLOGO ============ -->
+<section class="section catalog" id="catalogo">
+  <div class="wrap">
+    <div class="section-head section-head--split">
       <div>
-        <span class="font-mono text-xs text-steel">CATÁLOGO</span>
-        <h2 class="font-display font-700 uppercase text-3xl sm:text-4xl mt-2">Piezas con stock real</h2>
+        <span class="kicker rv">Catálogo · stock real</span>
+        <h2 class="h-display h2 rv" data-d="1" style="margin-top:18px">Lo que está en la repisa, <span class="em-accent">hoy.</span></h2>
       </div>
-      <a href="catalogo.html" class="link-underline font-display uppercase text-sm text-orange glow-hover px-2 py-1 rounded-sm">Ver catálogo completo →</a>
+      <div class="rv" data-d="2">
+        <p class="lead">Cada pieza tiene foto propia, SKU, años de compatibilidad y precio final con IVA. El stock es acotado (1–2 unidades): toca “Pedir” y te confirmamos disponibilidad y compatibilidad por WhatsApp.</p>
+      </div>
     </div>
-    <div id="featuredGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
-  </div>
-</section>
 
-<!-- WORK ORDERS / TESTIMONIALS -->
-<section class="border-b border-line bg-surface2">
-  <div class="max-w-7xl mx-auto px-6 py-16">
-    <span class="font-mono text-xs text-steel">TALLERES Y CLIENTES QUE COMPRAN CON NOSOTROS</span>
-    <h2 class="font-display font-700 uppercase text-3xl sm:text-4xl mt-2 mb-10">Órdenes de trabajo reales</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+    <div class="filters rv" id="chips" role="group" aria-label="Filtrar por marca" style="margin-bottom:28px">
+      <button class="chip is-active" data-filter="">Todas</button>
+      <button class="chip" data-filter="Hyundai">Hyundai</button>
+      <button class="chip" data-filter="Toyota">Toyota</button>
+      <button class="chip" data-filter="Chevrolet">Chevrolet</button>
+      <button class="chip" data-filter="Kia">Kia</button>
+    </div>
 
-      <div class="bg-base border border-line rounded-sm overflow-hidden glow-hover">
-        <div class="flex items-center justify-between px-5 py-3 border-b border-line bg-surface2 font-mono text-xs text-hazard">
-          <span>ORDEN #4471</span><span>RESUELTA</span>
-        </div>
-        <div class="p-5">
-          <p class="text-ink text-sm">"Necesitábamos un kit de embrague Exedy para un Corolla 2011 con urgencia. Confirmaron stock por WhatsApp y llegó al día siguiente."</p>
-          <p class="font-mono text-xs text-mute mt-4">Taller Rivera — San Bernardo</p>
-        </div>
+    <div class="pgrid" id="homeGrid" data-catalog data-limit="8">
+      <noscript><p class="muted">Para ver el catálogo activa JavaScript o escríbenos por <a href="https://wa.me/56999555599" style="color:var(--accent)">WhatsApp</a>.</p></noscript>
+    </div>
+
+    <div class="catalog-foot rv">
+      <p>¿No ves tu modelo? Aquí ves una selección. Mándanos marca, modelo y año y te decimos qué tenemos para tu auto.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <a href="catalogo.html" class="btn btn--ghost" data-magnetic>Ver catálogo completo <svg class="arrow"><use href="#i-arrow"/></svg></a>
+        <a href="https://wa.me/56999555599?text=Hola%20Nexoparts%2C%20no%20encuentro%20mi%20pieza%20en%20el%20cat%C3%A1logo.%20Mi%20auto%20es%3A%20" target="_blank" rel="noopener" class="btn btn--primary" data-magnetic><svg><use href="#i-wa"/></svg> Preguntar por mi modelo</a>
       </div>
-
-      <div class="bg-base border border-line rounded-sm overflow-hidden glow-hover">
-        <div class="flex items-center justify-between px-5 py-3 border-b border-line bg-surface2 font-mono text-xs text-hazard">
-          <span>ORDEN #3902</span><span>RESUELTA</span>
-        </div>
-        <div class="p-5">
-          <p class="text-ink text-sm">"Dejamos de adivinar el código de motor. Filtramos por marca y modelo y el sistema descartó las piezas que no calzaban."</p>
-          <p class="font-mono text-xs text-mute mt-4">MecánicaExpress — Ñuñoa</p>
-        </div>
-      </div>
-
-      <div class="bg-base border border-line rounded-sm overflow-hidden glow-hover">
-        <div class="flex items-center justify-between px-5 py-3 border-b border-line bg-surface2 font-mono text-xs text-hazard">
-          <span>ORDEN #5108</span><span>RESUELTA</span>
-        </div>
-        <div class="p-5">
-          <p class="text-ink text-sm">"Trabajamos con precio por volumen para talleres. Cotización por correo el mismo día, sin llamadas de por medio."</p>
-          <p class="font-mono text-xs text-mute mt-4">AutoTaller Contreras — Puente Alto</p>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="border-b border-line">
-  <div class="max-w-7xl mx-auto px-6 py-16 flex flex-col sm:flex-row items-center justify-between gap-6">
+<!-- ============ CONFIANZA ============ -->
+<section class="section trust" id="confianza">
+  <div class="wrap trust-grid">
     <div>
-      <h2 class="font-display font-700 uppercase text-2xl sm:text-3xl">¿Buscas una pieza específica o precio por volumen?</h2>
-      <p class="text-mute mt-2">Escríbenos con el modelo de tu auto o el SKU de la pieza y te confirmamos stock.</p>
+      <span class="kicker rv">Por qué Nexoparts</span>
+      <h2 class="h-display h2 rv" data-d="1" style="margin-top:18px">Comprar un repuesto no debería ser <span class="em-accent">una apuesta.</span></h2>
+      <p class="lead rv" data-d="2" style="margin-top:22px">Una chapa de contacto que no calza es un auto que no arranca y un fin de semana perdido. Por eso trabajamos al revés: primero confirmamos que la pieza calza con tu auto, y recién después pagas.</p>
+
+      <div class="pillars">
+        <div class="pillar rv"><span class="pillar-n">01</span><div><h3>Compatibilidad confirmada</h3><p>Nos dices marca, modelo y año; revisamos que la pieza calce con tu versión antes de cobrarte un peso.</p></div></div>
+        <div class="pillar rv" data-d="1"><span class="pillar-n">02</span><div><h3>La foto es la pieza que recibes</h3><p>Nada de imágenes de catálogo genérico. Fotografiamos nuestro propio stock, por ambos lados.</p></div></div>
+        <div class="pillar rv" data-d="2"><span class="pillar-n">03</span><div><h3>Personas reales al otro lado</h3><p>Te responde alguien que conoce las piezas, por WhatsApp, teléfono o correo. Despacho a todo Chile.</p></div></div>
+      </div>
     </div>
-    <a href="contacto.html" class="btn-primary bg-orange text-base font-display uppercase tracking-wide text-sm font-600 px-8 py-3 rounded-sm whitespace-nowrap">Ir a contacto</a>
+
+    <figure class="blueprint rv" data-d="1" aria-label="Diagrama técnico de un set de chapa de contacto">
+      <div class="bp-head"><span>Fig. 01 — Set chapa de contacto</span><span>Despiece</span></div>
+      <svg class="bp-svg" id="blueprint" viewBox="0 0 640 380" role="img" aria-label="Despiece: llave, cilindro de puerta, chapa de contacto y conector">
+        <!-- cotas -->
+        <path class="ln ln-dim" d="M20 330 H620"/>
+        <path class="ln ln-dim" d="M20 322 V338 M620 322 V338"/>
+        <text class="lbl" x="300" y="352">SET COMPLETO · 4 COMPONENTES</text>
+        <!-- 1 llave -->
+        <path class="ln draw" pathLength="1" d="M40 168 h44 a14 14 0 0 1 14 14 v36 a14 14 0 0 1-14 14 h-44 a14 14 0 0 1-14-14 v-36 a14 14 0 0 1 14-14 z"/>
+        <circle class="ln draw" pathLength="1" cx="50" cy="200" r="7"/>
+        <path class="ln draw" pathLength="1" d="M98 190 H210 L222 197 L210 204 H192 l-6 7 -6-7 -6 7 -6-7 -6 7 -6-7 -6 7 -6-7 H98"/>
+        <!-- 2 cilindro puerta -->
+        <ellipse class="ln ln-hot draw" pathLength="1" cx="270" cy="200" rx="14" ry="38"/>
+        <ellipse class="ln draw" pathLength="1" cx="270" cy="200" rx="7" ry="22"/>
+        <path class="ln draw" pathLength="1" d="M270 162 H338 A14 38 0 0 1 338 238 H270"/>
+        <path class="ln draw" pathLength="1" d="M300 162 V238 M318 162 V238"/>
+        <path class="ln draw" pathLength="1" d="M352 200 H372 V178 H386"/>
+        <!-- 3 chapa de contacto -->
+        <path class="ln ln-hot draw" pathLength="1" d="M410 140 H500 a16 16 0 0 1 16 16 V244 a16 16 0 0 1-16 16 H410 a16 16 0 0 1-16-16 V156 a16 16 0 0 1 16-16 z"/>
+        <circle class="ln draw" pathLength="1" cx="455" cy="200" r="34"/>
+        <circle class="ln draw" pathLength="1" cx="455" cy="200" r="20"/>
+        <path class="ln draw" pathLength="1" d="M445 200 H465"/>
+        <path class="ln draw" pathLength="1" d="M394 168 H380 V150 H394 M516 230 H530 V250 H516"/>
+        <!-- 4 conector -->
+        <path class="ln draw" pathLength="1" d="M556 176 H604 V224 H556 Z"/>
+        <path class="ln draw" pathLength="1" d="M568 188 V212 M580 188 V212 M592 188 V212"/>
+        <path class="ln ln-dim" d="M516 200 H556"/>
+        <!-- etiquetas -->
+        <path class="ln ln-dim" d="M70 168 V98 H118"/><circle class="dot" cx="70" cy="168" r="3"/>
+        <text class="lbl" x="124" y="102">01 · LLAVE CODIFICADA</text>
+        <path class="ln ln-dim" d="M300 162 V70 H330"/><circle class="dot" cx="300" cy="162" r="3"/>
+        <text class="lbl lbl-hot" x="336" y="74">02 · CILINDRO DE PUERTA</text>
+        <path class="ln ln-dim" d="M455 260 V292 H420"/><circle class="dot" cx="455" cy="260" r="3"/>
+        <text class="lbl lbl-hot" x="250" y="296">03 · CHAPA DE CONTACTO</text>
+        <path class="ln ln-dim" d="M580 176 V120"/><circle class="dot" cx="580" cy="176" r="3"/>
+        <text class="lbl" x="528" y="112">04 · CONECTOR</text>
+      </svg>
+      <figcaption class="bp-foot">
+        <span class="tag"><i></i>Llaves incluidas en sets</span>
+        <span class="tag"><i></i>Años de compatibilidad por pieza</span>
+        <span class="tag"><i></i>SKU para cotizar rápido</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ CÓMO COMPRAR (scroll horizontal en escritorio) ============ -->
+<section class="section process" id="como-comprar">
+  <div class="process-viewport">
+    <div class="wrap process-head">
+      <span class="kicker rv">Cómo comprar</span>
+      <h2 class="h-display h2 rv" data-d="1" style="margin-top:18px">De “se me rompió la chapa” a <span class="em-accent">auto andando.</span></h2>
+    </div>
+    <div class="process-track wrap" id="processTrack">
+      <article class="step rv">
+        <span class="step-ico"><svg><use href="#i-chat"/></svg></span>
+        <span class="step-n">01</span>
+        <h3>Cuéntanos qué auto tienes</h3>
+        <p>Marca, modelo y año por WhatsApp o el formulario. Si tienes el SKU del catálogo o una foto de la pieza vieja, mejor todavía.</p>
+      </article>
+      <article class="step rv" data-d="1">
+        <span class="step-ico"><svg><use href="#i-shield"/></svg></span>
+        <span class="step-n">02</span>
+        <h3>Confirmamos compatibilidad y stock</h3>
+        <p>Revisamos que la pieza calce con tu versión y te mandamos fotos reales, precio y costo de despacho. Sin compromiso.</p>
+      </article>
+      <article class="step rv" data-d="2">
+        <span class="step-ico"><svg><use href="#i-box"/></svg></span>
+        <span class="step-n">03</span>
+        <h3>Reservas y la preparamos</h3>
+        <p>Coordinamos el pago contigo y embalamos la pieza para que llegue tal cual la viste en la foto.</p>
+      </article>
+      <article class="step step--accent rv" data-d="3">
+        <span class="step-ico"><svg><use href="#i-truck"/></svg></span>
+        <span class="step-n">04</span>
+        <h3>Llega a tu puerta, en todo Chile</h3>
+        <p>Despachamos a domicilio a cualquier región y te avisamos cuando tu pieza va en camino.</p>
+      </article>
+    </div>
+    <div class="process-bar" aria-hidden="true"><span id="processBar"></span></div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIOS (DE EJEMPLO) ============ -->
+<!-- IMPORTANTE: estos testimonios son DE EJEMPLO. Reemplázalos por opiniones reales
+     de clientes (con su permiso) y luego borra las etiquetas "Ejemplo". -->
+<section class="section testis" id="opiniones">
+  <div class="wrap">
+    <div class="section-head section-head--split">
+      <div>
+        <span class="kicker rv">Opiniones</span>
+        <h2 class="h-display h2 rv" data-d="1" style="margin-top:18px">Lo que importa es que <span class="em-accent">arranque.</span></h2>
+      </div>
+      <div class="rv" data-d="2">
+        <span class="demo-note">⚠ Testimonios de ejemplo — se reemplazarán por opiniones reales</span>
+      </div>
+    </div>
+
+    <div class="tgrid">
+      <figure class="tcard tcard--big rv" data-tilt="3">
+        <div class="tcard-top"><span class="stars" aria-label="5 de 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="tcard-demo">Ejemplo</span></div>
+        <blockquote>“Me robaron la chapa de la Porter y la necesitaba para trabajar. Mandé el año por WhatsApp, me confirmaron que calzaba con fotos de la pieza y al otro día ya estaba repartiendo de nuevo.”</blockquote>
+        <figcaption><span class="avatar">C</span><span><strong>Cliente de ejemplo</strong><span>Hyundai Porter · Maipú</span></span></figcaption>
+      </figure>
+      <figure class="tcard rv" data-d="1" data-tilt="4">
+        <div class="tcard-top"><span class="stars" aria-label="5 de 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="tcard-demo">Ejemplo</span></div>
+        <blockquote>“En otros lados me decían ‘debería servirle’. Acá me pidieron el año exacto antes de venderme. Eso da confianza.”</blockquote>
+        <figcaption><span class="avatar">A</span><span><strong>Clienta de ejemplo</strong><span>Hyundai Accent · Concepción</span></span></figcaption>
+      </figure>
+      <figure class="tcard rv" data-d="2" data-tilt="4">
+        <div class="tcard-top"><span class="stars" aria-label="5 de 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="tcard-demo">Ejemplo</span></div>
+        <blockquote>“Como taller compramos seguido. Cotización rápida, piezas tal cual la foto y buen precio por volumen.”</blockquote>
+        <figcaption><span class="avatar">T</span><span><strong>Taller de ejemplo</strong><span>Mecánica general · Ñuñoa</span></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREGUNTAS FRECUENTES ============ -->
+<!-- Revisa que las respuestas reflejen cómo trabaja hoy la empresa (pagos, plazos, garantía). -->
+<section class="section" id="preguntas">
+  <div class="wrap faq-grid">
+    <div class="faq-side">
+      <span class="kicker rv">Preguntas frecuentes</span>
+      <h2 class="h-display h2 rv" data-d="1" style="margin-top:18px">Antes de <span class="em-accent">comprar.</span></h2>
+      <p class="lead rv" data-d="2" style="margin-top:22px">Si tu duda no está aquí, escríbenos: te respondemos en horario hábil.</p>
+      <a href="https://wa.me/56999555599?text=Hola%20Nexoparts%2C%20tengo%20una%20pregunta%3A%20" target="_blank" rel="noopener" class="btn btn--ghost btn--wa rv" data-d="3" style="margin-top:28px" data-magnetic><svg><use href="#i-wa"/></svg> Hacer una pregunta</a>
+    </div>
+    <div class="faq-list rv" data-d="1">
+      <details class="faq-item">
+        <summary>¿Cómo sé si la pieza es compatible con mi auto?<span class="faq-ico" aria-hidden="true"></span></summary>
+        <div class="faq-body"><p>Cada pieza indica marca, modelo y años compatibles. Aun así, antes de cobrarte te pedimos marca, modelo y año (y si puedes, una foto de tu pieza actual) para confirmar que calza con tu versión exacta.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Las fotos son de la pieza que voy a recibir?<span class="faq-ico" aria-hidden="true"></span></summary>
+        <div class="faq-body"><p>Sí. Fotografiamos nuestro propio stock, por ambos lados. Si quieres ver un detalle específico, te mandamos más fotos por WhatsApp antes de comprar.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Los precios incluyen IVA?<span class="faq-ico" aria-hidden="true"></span></summary>
+        <div class="faq-body"><p>Sí, todos los precios publicados son finales e incluyen IVA. El despacho se cotiza aparte según tu comuna. Como el stock es acotado (1 o 2 unidades por pieza), te confirmamos disponibilidad al momento de pedir.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hacen envíos fuera de Santiago?<span class="faq-ico" aria-hidden="true"></span></summary>
+        <div class="faq-body"><p>Sí, despachamos a todo Chile. El costo y el plazo dependen de tu comuna; te los informamos junto con la cotización, antes de que pagues.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tienen precios para talleres o compras por volumen?<span class="faq-ico" aria-hidden="true"></span></summary>
+        <div class="faq-body"><p>Sí. Si tienes un taller o compras seguido, cuéntanos qué necesitas y te enviamos una cotización por volumen.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué medios de pago aceptan?<span class="faq-ico" aria-hidden="true"></span></summary>
+        <div class="faq-body"><p>Te indicamos los medios de pago disponibles al confirmar tu pedido. Nunca te pediremos pagar antes de haber confirmado compatibilidad y stock.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿En qué horario atienden?<span class="faq-ico" aria-hidden="true"></span></summary>
+        <div class="faq-body"><p>De lunes a viernes, de 09:00 a 18:30. Los mensajes que llegan fuera de horario se responden a primera hora del siguiente día hábil.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="section contact" id="contacto">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="kicker rv">Contacto</span>
+      <h2 class="h-display h2 rv" data-d="1" style="margin-top:18px">Dinos qué auto tienes. <span class="em-accent">Nosotros buscamos la pieza.</span></h2>
+      <p class="lead rv" data-d="2" style="margin-top:22px">Respuesta en horario hábil, con fotos reales y disponibilidad confirmada.</p>
+      <div class="channels">
+        <a class="channel channel--wa rv" href="https://wa.me/56999555599" target="_blank" rel="noopener"><span class="ico"><svg><use href="#i-wa"/></svg></span><span><small>WhatsApp · lo más rápido</small><strong>+56 9 9955 5599</strong></span></a>
+        <a class="channel rv" data-d="1" href="tel:+56999555599"><span class="ico"><svg><use href="#i-phone"/></svg></span><span><small>Teléfono</small><strong>+56 9 9955 5599</strong></span></a>
+        <a class="channel rv" data-d="2" href="mailto:nexoparts.spa@gmail.com"><span class="ico"><svg><use href="#i-mail"/></svg></span><span><small>Correo</small><strong>nexoparts.spa@gmail.com</strong></span></a>
+        <div class="channel rv" data-d="3"><span class="ico"><svg><use href="#i-pin"/></svg></span><span><small>Ubicación · Horario</small><strong>Ñuñoa, Santiago · Lun–Vie 09:00–18:30</strong></span></div>
+      </div>
+    </div>
+
+    <form class="form rv" id="contactForm" data-d="1" novalidate>
+      <p class="form-title full">Cotiza tu repuesto</p>
+      <div class="field">
+        <label for="cf-nombre">Nombre <em>*</em></label>
+        <input class="input" id="cf-nombre" name="nombre" type="text" autocomplete="given-name" placeholder="Tu nombre" required>
+        <span class="err">Cuéntanos tu nombre.</span>
+      </div>
+      <div class="field">
+        <label for="cf-marca">Marca del auto <em>*</em></label>
+        <select class="input" id="cf-marca" name="marca" required>
+          <option value="">Elige una marca</option>
+          <option>Hyundai</option><option>Toyota</option><option>Chevrolet</option><option>Kia</option><option>Otra</option>
+        </select>
+        <span class="err">Elige la marca.</span>
+      </div>
+      <div class="field">
+        <label for="cf-modelo">Modelo y año <em>*</em></label>
+        <input class="input" id="cf-modelo" name="modelo" type="text" placeholder="Ej: Porter 2016" required>
+        <span class="err">Necesitamos el modelo y año para confirmar compatibilidad.</span>
+      </div>
+      <div class="field">
+        <label for="cf-pieza">Pieza o SKU</label>
+        <input class="input" id="cf-pieza" name="pieza" type="text" placeholder="Ej: chapa de contacto / 45019">
+      </div>
+      <div class="field full">
+        <label for="cf-msg">Mensaje</label>
+        <textarea class="input" id="cf-msg" name="mensaje" placeholder="Cualquier detalle que nos ayude: versión, si es mecánico o automático, comuna de despacho…"></textarea>
+      </div>
+      <div class="form-submit full">
+        <button type="submit" class="btn btn--primary" data-magnetic>
+          <span class="btn-fill"></span>
+          <span class="btn-label" style="display:inline-flex;align-items:center;gap:10px"><svg><use href="#i-wa"/></svg> Enviar por WhatsApp</span>
+          <span class="btn-check" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="M6 14.5l5 5L22 8.5"/></svg></span>
+        </button>
+      </div>
+      <p class="form-note full">Al enviar se abre WhatsApp con tu mensaje listo para mandar. Este sitio no guarda tus datos.</p>
+      <p class="form-status full" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="final-cta">
+  <div class="wrap">
+    <span class="kicker kicker--plain rv" style="justify-content:center">Nexoparts · Ñuñoa, Santiago</span>
+    <h2 class="h-display h2 rv" data-d="1" style="margin-top:18px">La pieza exacta. <span class="em-accent">No una aproximada.</span></h2>
+    <p class="lead rv" data-d="2">Escríbenos con tu marca, modelo y año. Te respondemos con fotos reales y disponibilidad confirmada.</p>
+    <div class="hero-actions rv" data-d="3">
+      <a href="https://wa.me/56999555599" target="_blank" rel="noopener" class="btn btn--primary" data-magnetic><svg><use href="#i-wa"/></svg> Escribir por WhatsApp</a>
+      <a href="catalogo.html" class="btn btn--ghost" data-magnetic>Ver catálogo <svg class="arrow"><use href="#i-arrow"/></svg></a>
+    </div>
   </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
-<footer class="bg-surface2">
-  <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-3 gap-8">
-    <div>
-      <span class="font-display font-700 text-xl">NEXO<span class="text-orange">PARTS</span></span>
-      <p class="text-mute text-sm mt-3 max-w-xs">Ñuñoa, Santiago. Despacho a todo Chile.</p>
-      <p class="font-mono text-xs text-mute mt-4">
-        <a href="tel:+56999555599" class="hover:text-orange">+56 9 9955 5599</a><br>
-        <a href="mailto:nexoparts.spa@gmail.com" class="hover:text-orange">nexoparts.spa@gmail.com</a>
-      </p>
+<!-- ============ PIE ============ -->
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      <a href="#top" class="brand"><img src="images/logo-sm.png" alt="" width="46" height="31"><span class="brand-word">NEXO<b>PARTS</b></span></a>
+      <p>Repuestos automotrices con stock real y compatibilidad confirmada. Ñuñoa, Santiago — despacho a todo Chile.</p>
     </div>
     <div>
-      <p class="font-display uppercase text-sm text-ink mb-3">Navegación</p>
-      <ul class="space-y-2 text-sm text-mute">
-        <li><a href="catalogo.html" class="hover:text-orange">Catálogo</a></li>
-        <li><a href="contacto.html" class="hover:text-orange">Contacto</a></li>
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#como-comprar">Cómo comprar</a></li>
+        <li><a href="#preguntas">Preguntas frecuentes</a></li>
+        <li><a href="catalogo.html">Catálogo completo</a></li>
       </ul>
     </div>
     <div>
-      <p class="font-display uppercase text-sm text-ink mb-3">Horario</p>
-      <p class="text-sm text-mute">Lun–Vie 09:00–18:30</p>
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="https://wa.me/56999555599" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="tel:+56999555599">+56 9 9955 5599</a></li>
+        <li><a href="mailto:nexoparts.spa@gmail.com">nexoparts.spa@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Horario</h4>
+      <ul>
+        <li>Lunes a viernes</li>
+        <li>09:00 – 18:30</li>
+      </ul>
     </div>
   </div>
-  <div class="hazard-strip h-1"></div>
-  <div class="max-w-7xl mx-auto px-6 py-5 text-center text-xs font-mono text-mute">
-    © 2026 Nexoparts — Todos los derechos reservados
+  <div class="footer-word" aria-hidden="true">NEXO<b>PARTS</b></div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year">2026</span> Nexoparts · Todos los derechos reservados</span>
+    <span>Hecho en Santiago de Chile</span>
   </div>
 </footer>
 
-<script src="site.js"></script>
-<script src="products.js"></script>
-<script>
-  // Populate hero search selects from the shared product data
-  const marcaSelect = document.getElementById('marca');
-  NEXOPARTS_BRANDS.forEach(b => {
-    const opt = document.createElement('option');
-    opt.value = b; opt.textContent = b;
-    marcaSelect.appendChild(opt);
-  });
-  const categoriaSelect = document.getElementById('categoria');
-  NEXOPARTS_CATEGORIES.forEach(c => {
-    const opt = document.createElement('option');
-    opt.value = c.id; opt.textContent = c.label;
-    categoriaSelect.appendChild(opt);
-  });
+<a class="wa-float" id="waFloat" href="https://wa.me/56999555599?text=Hola%20Nexoparts%2C%20busco%20un%20repuesto." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg><use href="#i-wa"/></svg></a>
 
-  // Brand marquee (duplicated for seamless loop)
-  function renderMarquee(elId) {
-    const el = document.getElementById(elId);
-    el.innerHTML = NEXOPARTS_BRANDS.map(b => `<span>${b}</span><span class="text-orange">·</span>`).join('');
-  }
-  renderMarquee('marqueeSetA');
-  renderMarquee('marqueeSetB');
-
-  // Featured products (first 4)
-  const featuredGrid = document.getElementById('featuredGrid');
-  NEXOPARTS_PRODUCTS.slice(0, 4).forEach(p => {
-    featuredGrid.insertAdjacentHTML('beforeend', `
-      <div class="part-card bg-surface border border-line rounded-sm p-5 flex flex-col">
-        <a href="catalogo.html" class="aspect-[3/4] bg-base rounded-sm border border-line mb-4 flex items-center justify-center overflow-hidden glow-hover">
-          <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover"
-               onmouseenter="this.src='${p.img2}'" onmouseleave="this.src='${p.img}'"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div style="display:none" class="w-full h-full items-center justify-center text-mute font-mono text-[10px] uppercase text-center px-2">Foto pendiente<br>${p.sku}</div>
-        </a>
-        <span class="font-mono text-[11px] text-steel">${p.brand.toUpperCase()} · ${p.sku}</span>
-        <h3 class="font-display uppercase text-base mt-1 text-white">${p.name}</h3>
-        <p class="text-mute text-xs mt-1">${p.fits}</p>
-        <div class="mt-auto pt-4 flex items-center justify-between">
-          <span class="font-mono text-[11px] text-hazard uppercase">${p.stock === 1 ? 'Última unidad' : 'Stock: ' + p.stock}</span>
-          <a href="catalogo.html" class="btn-primary bg-orange text-base font-display uppercase text-xs font-600 px-3 py-2 rounded-sm">Ver</a>
-        </div>
-      </div>
-    `);
-  });
-</script>
-
+<script defer src="lib/gsap.min.js"></script>
+<script defer src="lib/ScrollTrigger.min.js"></script>
+<script defer src="products.js?v=20261113b"></script>
+<script defer src="main.js?v=20261113b"></script>
 </body>
 </html>
